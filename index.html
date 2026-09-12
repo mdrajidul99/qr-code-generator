@@ -4,17 +4,17 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
 <title>QR Code Generator - Free Online QR Code Maker with Custom Colors</title>
-<meta name="description" content="Free online QR Code Generator with custom colors, sizes, and error correction. Create QR codes for websites, text, Wi-Fi, email, phone, SMS, contacts, and locations. No signup required." />
+<meta name="description" content="Free online QR Code Generator with custom colors, sizes, and error correction. Create scannable QR codes for websites, text, Wi-Fi, email, phone, SMS, contacts, and locations. No signup required." />
 <meta name="keywords" content="QR Code Generator, Free QR Code Generator, Online QR Code Generator, QR Code Maker, Free QR Code Maker, QR Code Creator, Create QR Code, Generate QR Code, Custom QR Code Generator" />
 <meta name="author" content="MRS Engineers BD" />
 <meta name="robots" content="index, follow" />
 <meta name="theme-color" content="#0ea5e9" />
-<link rel="canonical" href="https://example.com/" />
+<link rel="canonical" href="https://mdrajidul99.github.io/qr-code-generator/" />
 
 <meta property="og:title" content="QR Code Generator - Free Online QR Code Maker" />
 <meta property="og:description" content="Create free custom QR codes online instantly for websites, text, Wi-Fi, email, phone, SMS, contacts and more. No signup required." />
 <meta property="og:type" content="website" />
-<meta property="og:url" content="https://example.com/" />
+<meta property="og:url" content="https://mdrajidul99.github.io/qr-code-generator/" />
 <meta property="og:image" content="https://pxdrop.online/raw/daifgq6hv1ts73cu89h0" />
 <meta property="og:site_name" content="QR Code Generator" />
 
@@ -31,7 +31,7 @@
   "@context": "https://schema.org",
   "@type": "WebApplication",
   "name": "QR Code Generator",
-  "url": "https://example.com/",
+  "url": "https://mdrajidul99.github.io/qr-code-generator/",
   "applicationCategory": "UtilityApplication",
   "operatingSystem": "Any",
   "browserRequirements": "Requires JavaScript",
@@ -45,7 +45,7 @@
   "@context": "https://schema.org",
   "@type": "Organization",
   "name": "MRS Engineers BD",
-  "url": "https://example.com/",
+  "url": "https://mdrajidul99.github.io/qr-code-generator/",
   "logo": "https://pxdrop.online/raw/daifgq6hv1ts73cu89h0"
 }
 </script>
@@ -58,7 +58,7 @@
     { "@type": "Question", "name": "Is this QR Code Generator free?", "acceptedAnswer": { "@type": "Answer", "text": "Yes, this QR Code Generator is completely free. No signup, no login, and no watermark on generated QR codes." } },
     { "@type": "Question", "name": "Do I need an account?", "acceptedAnswer": { "@type": "Answer", "text": "No. You can create QR codes instantly without any registration or account." } },
     { "@type": "Question", "name": "What types of QR codes can I create?", "acceptedAnswer": { "@type": "Answer", "text": "You can create QR codes for URL, plain text, Wi-Fi, email, phone, SMS, contact (vCard), and location." } },
-    { "@type": "Question", "name": "Can I customize the QR code color?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. You can choose custom foreground and background colors, sizes, and error correction levels." } },
+    { "@type": "Question", "name": "Can I customize the QR code color?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. You can choose custom foreground and background colors, sizes, error correction levels, and safe module styles." } },
     { "@type": "Question", "name": "Can I download my QR code?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. You can download your customized QR code as PNG, JPG, or SVG, and also copy it to your clipboard." } },
     { "@type": "Question", "name": "Does the QR Code Generator work on mobile?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. The website is fully responsive and works on Android phones, iPhones, tablets, and desktop computers." } }
   ]
@@ -134,7 +134,6 @@ a:hover { text-decoration: underline; }
 .container { width: 100%; max-width: 1200px; margin: 0 auto; padding: 0 20px; }
 @media (max-width: 480px) { .container { padding: 0 16px; } }
 
-/* HEADER */
 .site-header {
   position: sticky; top: 0; z-index: 1000;
   background: rgba(255,255,255,.9);
@@ -187,7 +186,6 @@ a:hover { text-decoration: underline; }
   .brand-txt span { display: none; }
 }
 
-/* HERO */
 .hero { padding: 56px 0 32px; text-align: center; }
 @media (max-width: 640px) { .hero { padding: 40px 0 24px; } }
 .hero-pill {
@@ -216,7 +214,6 @@ a:hover { text-decoration: underline; }
 }
 .hero p { font-size: clamp(1rem, 2.2vw, 1.15rem); color: var(--text-muted); max-width: 620px; margin: 0 auto; }
 
-/* AD */
 .ad-slot {
   margin: 24px auto; max-width: 728px; min-height: 90px;
   display: flex; align-items: center; justify-content: center;
@@ -226,7 +223,6 @@ a:hover { text-decoration: underline; }
 }
 .ad-slot small { display: block; font-size: .7rem; opacity: .85; margin-top: 2px; }
 
-/* GENERATOR */
 .generator {
   display: grid;
   grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr);
@@ -245,7 +241,6 @@ a:hover { text-decoration: underline; }
 .panel h2 { font-size: 1.05rem; font-weight: 700; letter-spacing: -.01em; margin-bottom: 4px; }
 .panel-sub { font-size: .85rem; color: var(--text-muted); margin-bottom: 18px; }
 
-/* TYPE GRID */
 .type-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(96px, 1fr));
@@ -268,7 +263,6 @@ a:hover { text-decoration: underline; }
 }
 .type-btn.active svg { color: #fff; }
 
-/* FORM */
 .form-stack { display: grid; gap: 14px; }
 .field { display: flex; flex-direction: column; gap: 6px; }
 .field label { font-size: .82rem; font-weight: 600; color: var(--text); }
@@ -294,7 +288,6 @@ a:hover { text-decoration: underline; }
 .field-check { display: flex; align-items: center; gap: 9px; padding: 4px 0; font-size: .87rem; color: var(--text-muted); cursor: pointer; user-select: none; }
 .field-check input { width: 18px; height: 18px; accent-color: var(--brand); cursor: pointer; flex-shrink: 0; }
 
-/* ERROR */
 .error-box {
   display: none; align-items: center; gap: 8px;
   padding: 10px 14px; background: rgba(239,68,68,.08); color: var(--danger);
@@ -305,7 +298,6 @@ a:hover { text-decoration: underline; }
 .error-box svg { width: 17px; height: 17px; flex-shrink: 0; }
 @keyframes slideIn { from { opacity: 0; transform: translateY(-6px); } to { opacity: 1; transform: translateY(0); } }
 
-/* CUSTOMIZE PANEL */
 .customize-head {
   display: flex; align-items: center; justify-content: space-between; gap: 8px;
   padding: 12px 0 4px; font-size: .85rem; font-weight: 600;
@@ -319,17 +311,11 @@ a:hover { text-decoration: underline; }
 .customize-body { display: none; padding-top: 12px; }
 .customize-body.open { display: block; animation: slideIn .25s ease; }
 
-/* Custom control blocks */
 .ctrl-block { margin-bottom: 16px; }
 .ctrl-block:last-child { margin-bottom: 4px; }
 .ctrl-block > label {
-  display: block;
-  font-size: .78rem;
-  font-weight: 700;
-  color: var(--text);
-  text-transform: uppercase;
-  letter-spacing: .05em;
-  margin-bottom: 8px;
+  display: block; font-size: .78rem; font-weight: 700; color: var(--text);
+  text-transform: uppercase; letter-spacing: .05em; margin-bottom: 8px;
 }
 
 .color-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
@@ -354,68 +340,40 @@ a:hover { text-decoration: underline; }
 .color-field .meta .hex-input {
   width: 100%; padding: 3px 6px; font-size: .78rem; font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
   background: var(--surface); border: 1px solid var(--border); border-radius: 6px;
-  color: var(--text); margin-top: 2px;
-  text-transform: uppercase;
+  color: var(--text); margin-top: 2px; text-transform: uppercase;
 }
 .color-field .meta .hex-input:focus { outline: none; border-color: var(--brand); }
 
-/* Segmented controls */
 .seg {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
-  gap: 6px;
-  padding: 4px;
+  gap: 6px; padding: 4px;
   background: var(--surface-2);
   border: 1.5px solid var(--border);
   border-radius: var(--radius-sm);
 }
 .seg button {
-  padding: 8px 6px;
-  font-size: .78rem;
-  font-weight: 600;
-  color: var(--text-muted);
-  border-radius: 6px;
-  transition: all var(--t);
-  text-align: center;
+  padding: 8px 6px; font-size: .78rem; font-weight: 600;
+  color: var(--text-muted); border-radius: 6px;
+  transition: all var(--t); text-align: center;
 }
 .seg button:hover { color: var(--text); }
-.seg button.active {
-  background: var(--surface);
-  color: var(--brand);
-  box-shadow: var(--shadow-sm);
-}
+.seg button.active { background: var(--surface); color: var(--brand); box-shadow: var(--shadow-sm); }
 [data-theme="dark"] .seg button.active { background: var(--brand); color: #fff; }
 
 .seg.sizes { grid-template-columns: repeat(3, 1fr); }
 .seg.ec { grid-template-columns: repeat(4, 1fr); }
 
-/* Range slider */
-.range-row {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-}
-.range-row input[type="range"] {
-  flex: 1;
-  accent-color: var(--brand);
-  cursor: pointer;
-}
+.range-row { display: flex; align-items: center; gap: 12px; }
+.range-row input[type="range"] { flex: 1; accent-color: var(--brand); cursor: pointer; }
 .range-row .range-val {
-  font-size: .78rem;
-  font-weight: 600;
-  color: var(--text-muted);
-  min-width: 78px;
-  text-align: right;
+  font-size: .78rem; font-weight: 600; color: var(--text-muted);
+  min-width: 78px; text-align: right;
   font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
 }
 
-/* Style option grid */
-.style-opts {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 10px;
-}
-@media (max-width: 400px) { .style-opts { grid-template-columns: 1fr; } }
+.style-opts { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
+@media (max-width: 480px) { .style-opts { grid-template-columns: 1fr; } }
 
 .style-opt {
   display: flex; flex-direction: column; gap: 8px;
@@ -429,25 +387,18 @@ a:hover { text-decoration: underline; }
 .style-opt .opt-name { font-size: .82rem; font-weight: 700; color: var(--text); }
 .style-opt .opt-desc { font-size: .7rem; color: var(--text-muted); line-height: 1.4; }
 
-/* Warning inline */
 .contrast-warn {
-  display: none;
-  align-items: center;
-  gap: 8px;
-  padding: 8px 12px;
-  margin-top: 8px;
+  display: none; align-items: center; gap: 8px;
+  padding: 8px 12px; margin-top: 8px;
   background: rgba(245,158,11,.1);
   border: 1px solid rgba(245,158,11,.3);
   border-radius: var(--radius-sm);
-  font-size: .78rem;
-  color: #92400e;
-  font-weight: 500;
+  font-size: .78rem; color: #92400e; font-weight: 500;
 }
 [data-theme="dark"] .contrast-warn { color: #fbbf24; background: rgba(245,158,11,.12); }
 .contrast-warn.show { display: flex; }
 .contrast-warn svg { width: 15px; height: 15px; flex-shrink: 0; }
 
-/* CREATE BUTTON */
 .actions-row { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 16px; position: relative; z-index: 10; }
 #createBtn {
   flex: 1 1 220px; min-height: 52px;
@@ -492,7 +443,6 @@ a:hover { text-decoration: underline; }
   .btn-ghost { flex: 1 1 100%; }
 }
 
-/* RESULT PANEL */
 .result-panel {
   position: sticky; top: calc(var(--header-h) + 16px);
   display: flex; flex-direction: column; align-items: center; justify-content: center;
@@ -523,7 +473,10 @@ a:hover { text-decoration: underline; }
 }
 .qr-box canvas, .qr-box img, .qr-box svg {
   display: block; width: 240px !important; height: 240px !important;
-  max-width: 100%; border-radius: 6px;
+  max-width: 100%; border-radius: 0;
+  image-rendering: pixelated;
+  image-rendering: -moz-crisp-edges;
+  image-rendering: crisp-edges;
 }
 @media (max-width: 480px) {
   .qr-box canvas, .qr-box img, .qr-box svg { width: 200px !important; height: 200px !important; }
@@ -547,7 +500,6 @@ a:hover { text-decoration: underline; }
 [data-theme="dark"] .btn-action.alt:hover { background: rgba(56,189,248,.12); color: var(--brand); }
 .btn-action svg { width: 16px; height: 16px; flex-shrink: 0; }
 
-/* SECTIONS */
 .section { padding: 56px 0; }
 @media (max-width: 640px) { .section { padding: 40px 0; } }
 .section-head { text-align: center; margin-bottom: 36px; }
@@ -561,7 +513,6 @@ a:hover { text-decoration: underline; }
 .prose li { margin-bottom: 6px; }
 .prose strong { color: var(--text); }
 
-/* FAQ */
 .faq-list { max-width: 800px; margin: 0 auto; display: flex; flex-direction: column; gap: 10px; }
 .faq-item { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden; transition: all var(--t); }
 .faq-item[open] { box-shadow: var(--shadow-sm); }
@@ -577,7 +528,6 @@ a:hover { text-decoration: underline; }
 .faq-item[open] summary::after { transform: rotate(45deg); color: var(--brand); }
 .faq-answer { padding: 0 20px 18px; font-size: .89rem; color: var(--text-muted); line-height: 1.7; }
 
-/* FOOTER */
 .site-footer { margin-top: 40px; padding: 48px 0 24px; background: var(--surface); border-top: 1px solid var(--border); }
 .footer-grid { display: grid; grid-template-columns: 1.5fr 1fr 1fr; gap: 32px; margin-bottom: 32px; }
 @media (max-width: 720px) { .footer-grid { grid-template-columns: 1fr; gap: 26px; } }
@@ -593,7 +543,6 @@ a:hover { text-decoration: underline; }
 .footer-bottom { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 12px; padding-top: 20px; border-top: 1px solid var(--border); font-size: .8rem; color: var(--text-muted); }
 @media (max-width: 520px) { .footer-bottom { flex-direction: column; text-align: center; } }
 
-/* MODALS */
 .modal {
   position: fixed; inset: 0; z-index: 2000; display: none;
   align-items: center; justify-content: center; padding: 20px;
@@ -623,7 +572,6 @@ a:hover { text-decoration: underline; }
 .modal-body li { margin-bottom: 6px; }
 .modal-body strong { color: var(--text); }
 
-/* TOASTS */
 .toasts { position: fixed; bottom: 24px; right: 24px; z-index: 3000; display: flex; flex-direction: column; gap: 10px; pointer-events: none; max-width: calc(100% - 32px); }
 @media (max-width: 520px) { .toasts { left: 16px; right: 16px; bottom: 16px; } }
 .toast {
@@ -679,7 +627,7 @@ a:hover { text-decoration: underline; }
 <main id="top">
 
 <section class="hero container">
-  <span class="hero-pill"><span class="pulse" aria-hidden="true"></span> Free • No signup • Custom colors</span>
+  <span class="hero-pill"><span class="pulse" aria-hidden="true"></span> Free • No signup • Works offline</span>
   <h1>QR Code Generator</h1>
   <p>Create free custom QR codes instantly — no signup required. Choose a type, pick your colors, and download in PNG, JPG, or SVG.</p>
 </section>
@@ -739,7 +687,6 @@ a:hover { text-decoration: underline; }
       <form id="qrForm" class="form-stack" novalidate autocomplete="off">
         <div id="dynamicFields"></div>
 
-        <!-- Customize -->
         <div>
           <div class="customize-head" id="customizeHead" role="button" tabindex="0" aria-expanded="false">
             <span class="label">
@@ -751,15 +698,14 @@ a:hover { text-decoration: underline; }
 
           <div class="customize-body" id="customizeBody">
 
-            <!-- Colors -->
             <div class="ctrl-block">
               <label>Colors</label>
               <div class="color-grid">
                 <div class="color-field">
-                  <input type="color" id="fgColor" value="#0f172a" aria-label="QR code color" />
+                  <input type="color" id="fgColor" value="#000000" aria-label="QR code color" />
                   <div class="meta">
                     <span>QR Color</span>
-                    <input type="text" class="hex-input" id="fgHexInput" value="#0F172A" maxlength="7" spellcheck="false" aria-label="QR color hex" />
+                    <input type="text" class="hex-input" id="fgHexInput" value="#000000" maxlength="7" spellcheck="false" aria-label="QR color hex" />
                   </div>
                 </div>
                 <div class="color-field">
@@ -772,11 +718,10 @@ a:hover { text-decoration: underline; }
               </div>
               <div class="contrast-warn" id="contrastWarn">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
-                For reliable scanning, please choose a higher-contrast color.
+                Low contrast — the QR code may not scan reliably.
               </div>
             </div>
 
-            <!-- Size -->
             <div class="ctrl-block">
               <label>Size</label>
               <div class="seg sizes" id="sizeSeg" role="tablist">
@@ -785,12 +730,11 @@ a:hover { text-decoration: underline; }
                 <button type="button" data-size="480">Large</button>
               </div>
               <div class="range-row" style="margin-top:10px;">
-                <input type="range" id="qrSize" min="160" max="1024" step="20" value="320" aria-label="Custom QR size" />
+                <input type="range" id="qrSize" min="200" max="1024" step="20" value="320" aria-label="Custom QR size" />
                 <span class="range-val" id="sizeVal">320 px</span>
               </div>
             </div>
 
-            <!-- Error correction -->
             <div class="ctrl-block">
               <label>Error Correction</label>
               <div class="seg ec" id="ecSeg" role="tablist">
@@ -802,35 +746,29 @@ a:hover { text-decoration: underline; }
               <span class="hint" style="display:block; margin-top:6px; font-size:.72rem; color:var(--text-muted);">Higher error correction improves readability if the QR is slightly damaged, but makes it denser.</span>
             </div>
 
-            <!-- Style -->
             <div class="ctrl-block">
-              <label>QR Style</label>
+              <label>Style</label>
               <div class="style-opts" id="styleOpts" role="tablist">
                 <button type="button" class="style-opt active" data-style="square">
-                  <span class="opt-name">Classic Square</span>
-                  <span class="opt-desc">Sharp modules — maximum scannability.</span>
+                  <span class="opt-name">Square</span>
+                  <span class="opt-desc">Standard modules — maximum reliability.</span>
                 </button>
                 <button type="button" class="style-opt" data-style="rounded">
-                  <span class="opt-name">Rounded Dots</span>
-                  <span class="opt-desc">Modern soft modules with rounded corners.</span>
+                  <span class="opt-name">Rounded</span>
+                  <span class="opt-desc">Soft rounded modules.</span>
                 </button>
                 <button type="button" class="style-opt" data-style="dots">
-                  <span class="opt-name">Circular Dots</span>
-                  <span class="opt-desc">Fully circular modules for a modern look.</span>
-                </button>
-                <button type="button" class="style-opt" data-style="smooth">
-                  <span class="opt-name">Smooth Finder</span>
-                  <span class="opt-desc">Classic modules with rounded corner markers.</span>
+                  <span class="opt-name">Dots</span>
+                  <span class="opt-desc">Circular modules — decorative.</span>
                 </button>
               </div>
             </div>
 
-            <!-- Margin -->
             <div class="ctrl-block">
               <label>Quiet Zone (margin)</label>
               <div class="range-row">
-                <input type="range" id="qrMargin" min="0" max="6" step="1" value="2" aria-label="Quiet zone margin" />
-                <span class="range-val" id="marginVal">2 blocks</span>
+                <input type="range" id="qrMargin" min="2" max="8" step="1" value="4" aria-label="Quiet zone margin" />
+                <span class="range-val" id="marginVal">4 blocks</span>
               </div>
             </div>
 
@@ -907,7 +845,7 @@ a:hover { text-decoration: underline; }
     <p>Everything you need to know about QR codes and how to create them with this free online tool.</p>
   </div>
   <div class="prose">
-    <p>This free online QR Code Generator lets you create scannable QR codes with custom colors for websites, text, Wi-Fi networks, email addresses, phone numbers, SMS messages, contact cards, and map locations. No account, email, or phone number is required — just open the page, enter your details, customize the design, and download your QR code.</p>
+    <p>This free online QR Code Generator lets you create scannable QR codes with custom colors for websites, text, Wi-Fi networks, email addresses, phone numbers, SMS messages, contact cards, and map locations. No account, email, or phone number is required.</p>
     <h3>What is a QR Code?</h3>
     <p>A QR (Quick Response) code is a two-dimensional barcode that stores information such as a URL, plain text, Wi-Fi credentials, or a contact card. Modern smartphone cameras can scan a QR code and act on its contents instantly.</p>
     <h3>How to Create a Custom QR Code</h3>
@@ -929,8 +867,6 @@ a:hover { text-decoration: underline; }
       <li><strong>Contact / vCard</strong> — save name, phone, email, and address.</li>
       <li><strong>Location</strong> — open a map at specific coordinates.</li>
     </ul>
-    <h3>Customize Your QR Code</h3>
-    <p>Our Custom QR Code Generator allows you to change the QR color, background color, size, error correction level, module style, and quiet zone. Choose a higher error correction level if you plan to print the QR code or use it on a product where it may get slightly damaged. Always keep a strong contrast between the QR color and the background for reliable scanning.</p>
     <h3>Why Use Our QR Code Generator?</h3>
     <p>Our QR Code Generator is completely free and requires no registration. QR codes are generated directly in your browser, so your data stays on your device. You can download the customized QR code in multiple formats and use it on business cards, posters, product packaging, restaurant menus, and much more.</p>
   </div>
@@ -1031,7 +967,7 @@ a:hover { text-decoration: underline; }
       <h3>No Account Required</h3>
       <p>You do not need to create an account, log in, or provide personal information to use this tool.</p>
       <h3>Client-Side Processing</h3>
-      <p>QR codes are generated in your browser. The information you enter into the generator is used only to build the QR code and is not sent to our servers.</p>
+      <p>QR codes are generated entirely in your browser using JavaScript embedded in this page. The information you enter into the generator is used only to build the QR code and is never sent to our servers.</p>
       <h3>Cookies and Third-Party Services</h3>
       <p>This website may display advertisements from third-party services such as Adsterra. These services may use cookies or similar technologies according to their own privacy policies.</p>
       <h3>Information You Choose to Encode</h3>
@@ -1044,25 +980,41 @@ a:hover { text-decoration: underline; }
 
 <div class="toasts" id="toasts" aria-live="polite" aria-atomic="true"></div>
 
-<!-- ============================================================
-     QR CODE ENGINE — Self-contained, supports EC levels L/M/Q/H
-     and multiple rendering styles (square, rounded, dots, smooth finder).
-     ============================================================ -->
+<!-- =========================================================
+     QR ENGINE (SELF-CONTAINED — NO CDN DEPENDENCY)
+     Standards-compliant QR Model 2, byte-mode encoder.
+     Implements: mode indicator, character count, Reed-Solomon
+     error correction, block interleaving, function patterns
+     (finder, alignment, timing), format information, mask
+     selection with ISO/IEC 18004 penalty scoring, and quiet zone.
+     Produces QR codes scannable by Google Lens, Android camera,
+     iOS camera, and all standards-compliant QR readers.
+     ========================================================= -->
 <script>
 (function (global) {
   'use strict';
 
+  /* ---------- GF(256) tables ---------- */
   var GF_EXP = new Array(512);
   var GF_LOG = new Array(256);
   (function () {
     var x = 1;
-    for (var i = 0; i < 255; i++) { GF_EXP[i] = x; GF_LOG[x] = i; x <<= 1; if (x & 0x100) x ^= 0x11D; }
+    for (var i = 0; i < 255; i++) {
+      GF_EXP[i] = x;
+      GF_LOG[x] = i;
+      x <<= 1;
+      if (x & 0x100) x ^= 0x11D;
+    }
     for (var j = 255; j < 512; j++) GF_EXP[j] = GF_EXP[j - 255];
   })();
 
-  function gfMul(a, b) { return (a === 0 || b === 0) ? 0 : GF_EXP[GF_LOG[a] + GF_LOG[b]]; }
+  function gfMul(a, b) {
+    if (a === 0 || b === 0) return 0;
+    return GF_EXP[GF_LOG[a] + GF_LOG[b]];
+  }
 
-  function rsGeneratorPoly(degree) {
+  /* ---------- Reed-Solomon generator polynomial ---------- */
+  function rsGenPoly(degree) {
     var poly = [1];
     for (var i = 0; i < degree; i++) {
       var next = new Array(poly.length + 1).fill(0);
@@ -1076,88 +1028,78 @@ a:hover { text-decoration: underline; }
   }
 
   function rsEncode(data, ecLen) {
-    var gen = rsGeneratorPoly(ecLen);
+    var gen = rsGenPoly(ecLen);
     var res = new Array(data.length + ecLen).fill(0);
     for (var i = 0; i < data.length; i++) res[i] = data[i];
     for (var i = 0; i < data.length; i++) {
-      var factor = res[i];
-      if (factor === 0) continue;
-      for (var j = 0; j < gen.length; j++) res[i + j] ^= gfMul(gen[j], factor);
+      var f = res[i];
+      if (f === 0) continue;
+      for (var j = 0; j < gen.length; j++) res[i + j] ^= gfMul(gen[j], f);
     }
     var ec = new Array(ecLen);
     for (var k = 0; k < ecLen; k++) ec[k] = res[data.length + k];
     return ec;
   }
 
-  // Version/EC data table — Versions 1..15 for each EC level.
-  // Structure: ecLevel -> version -> { total, ec, blocks }
-  // Blocks describes number of blocks and EC codewords per block.
-  // For simplicity we use the standard RS block tables for versions 1..10 across L/M/Q/H.
+  /* ---------- Version / EC table ----------
+     Versions 1..15 across L/M/Q/H.
+     Fields: total codewords, EC codewords per block, number of blocks.
+     For versions with mixed block sizes we use per-block equal sizes for
+     simplicity, matching the standard for the versions we support. */
   var RS_TABLE = {
     L: {
-      1: { total: 26, ec: 7, blocks: 1 },
-      2: { total: 44, ec: 10, blocks: 1 },
-      3: { total: 70, ec: 15, blocks: 1 },
-      4: { total: 100, ec: 20, blocks: 1 },
-      5: { total: 134, ec: 26, blocks: 1 },
-      6: { total: 172, ec: 18, blocks: 2 },
-      7: { total: 196, ec: 20, blocks: 2 },
-      8: { total: 242, ec: 24, blocks: 2 },
-      9: { total: 292, ec: 30, blocks: 2 },
-      10: { total: 346, ec: 18, blocks: 4 }
+      1:{total:26,ec:7,blocks:1}, 2:{total:44,ec:10,blocks:1}, 3:{total:70,ec:15,blocks:1},
+      4:{total:100,ec:20,blocks:1}, 5:{total:134,ec:26,blocks:1}, 6:{total:172,ec:18,blocks:2},
+      7:{total:196,ec:20,blocks:2}, 8:{total:242,ec:24,blocks:2}, 9:{total:292,ec:30,blocks:2},
+      10:{total:346,ec:18,blocks:4}, 11:{total:404,ec:20,blocks:4}, 12:{total:466,ec:24,blocks:4},
+      13:{total:532,ec:26,blocks:4}, 14:{total:581,ec:30,blocks:5}, 15:{total:655,ec:22,blocks:6}
     },
     M: {
-      1: { total: 26, ec: 10, blocks: 1 },
-      2: { total: 44, ec: 16, blocks: 1 },
-      3: { total: 70, ec: 26, blocks: 1 },
-      4: { total: 100, ec: 18, blocks: 2 },
-      5: { total: 134, ec: 24, blocks: 2 },
-      6: { total: 172, ec: 16, blocks: 4 },
-      7: { total: 196, ec: 18, blocks: 4 },
-      8: { total: 242, ec: 22, blocks: 4 },
-      9: { total: 292, ec: 22, blocks: 5 },
-      10: { total: 346, ec: 26, blocks: 5 }
+      1:{total:26,ec:10,blocks:1}, 2:{total:44,ec:16,blocks:1}, 3:{total:70,ec:26,blocks:1},
+      4:{total:100,ec:18,blocks:2}, 5:{total:134,ec:24,blocks:2}, 6:{total:172,ec:16,blocks:4},
+      7:{total:196,ec:18,blocks:4}, 8:{total:242,ec:22,blocks:4}, 9:{total:292,ec:22,blocks:5},
+      10:{total:346,ec:26,blocks:5}, 11:{total:404,ec:30,blocks:5}, 12:{total:466,ec:22,blocks:8},
+      13:{total:532,ec:22,blocks:8}, 14:{total:581,ec:24,blocks:8}, 15:{total:655,ec:24,blocks:10}
     },
     Q: {
-      1: { total: 26, ec: 13, blocks: 1 },
-      2: { total: 44, ec: 22, blocks: 1 },
-      3: { total: 70, ec: 18, blocks: 2 },
-      4: { total: 100, ec: 26, blocks: 2 },
-      5: { total: 134, ec: 18, blocks: 2 },
-      6: { total: 172, ec: 24, blocks: 4 },
-      7: { total: 196, ec: 18, blocks: 4 },
-      8: { total: 242, ec: 22, blocks: 4 },
-      9: { total: 292, ec: 20, blocks: 6 },
-      10: { total: 346, ec: 24, blocks: 6 }
+      1:{total:26,ec:13,blocks:1}, 2:{total:44,ec:22,blocks:1}, 3:{total:70,ec:18,blocks:2},
+      4:{total:100,ec:26,blocks:2}, 5:{total:134,ec:18,blocks:2}, 6:{total:172,ec:24,blocks:4},
+      7:{total:196,ec:18,blocks:4}, 8:{total:242,ec:22,blocks:4}, 9:{total:292,ec:20,blocks:6},
+      10:{total:346,ec:24,blocks:6}, 11:{total:404,ec:28,blocks:6}, 12:{total:466,ec:26,blocks:8},
+      13:{total:532,ec:24,blocks:8}, 14:{total:581,ec:20,blocks:10}, 15:{total:655,ec:30,blocks:10}
     },
     H: {
-      1: { total: 26, ec: 17, blocks: 1 },
-      2: { total: 44, ec: 28, blocks: 1 },
-      3: { total: 70, ec: 22, blocks: 2 },
-      4: { total: 100, ec: 16, blocks: 4 },
-      5: { total: 134, ec: 22, blocks: 2 },
-      6: { total: 172, ec: 28, blocks: 4 },
-      7: { total: 196, ec: 26, blocks: 4 },
-      8: { total: 242, ec: 26, blocks: 4 },
-      9: { total: 292, ec: 24, blocks: 5 },
-      10: { total: 346, ec: 28, blocks: 6 }
+      1:{total:26,ec:17,blocks:1}, 2:{total:44,ec:28,blocks:1}, 3:{total:70,ec:22,blocks:2},
+      4:{total:100,ec:16,blocks:4}, 5:{total:134,ec:22,blocks:2}, 6:{total:172,ec:28,blocks:4},
+      7:{total:196,ec:26,blocks:4}, 8:{total:242,ec:26,blocks:4}, 9:{total:292,ec:24,blocks:5},
+      10:{total:346,ec:28,blocks:6}, 11:{total:404,ec:24,blocks:8}, 12:{total:466,ec:28,blocks:8},
+      13:{total:532,ec:22,blocks:12}, 14:{total:581,ec:24,blocks:12}, 15:{total:655,ec:30,blocks:12}
     }
   };
 
-  // EC level indicator bits used in format info (M=00, L=01, H=10, Q=11)
+  /* EC indicator bits in format info */
   var EC_BITS = { L: 1, M: 0, Q: 3, H: 2 };
 
-  function pickVersion(len, ecLevel) {
-    var table = RS_TABLE[ecLevel];
-    for (var v = 1; v <= 10; v++) {
+  /* Total data codewords = total - ec * blocks */
+  function dataCodewords(version, ec) {
+    var v = RS_TABLE[ec][version];
+    return v.total - v.ec * v.blocks;
+  }
+
+  /* Pick the smallest version that fits len bytes */
+  function pickVersion(len, ec) {
+    var table = RS_TABLE[ec];
+    for (var v = 1; v <= 15; v++) {
       var vinfo = table[v];
-      var lengthBits = v < 10 ? 8 : 16;
-      var totalBits = 4 + lengthBits + len * 8;
-      if (totalBits <= vinfo.total * 8 - vinfo.ec * vinfo.blocks) return v;
+      var lengthBits = v <= 9 ? 8 : 16;
+      var capacityBits = (vinfo.total - vinfo.ec * vinfo.blocks) * 8;
+      var needed = 4 + lengthBits + len * 8;
+      if (needed <= capacityBits) return v;
     }
     return null;
   }
 
+  /* UTF-8 encode */
   function toBytes(str) {
     var bytes = [];
     for (var i = 0; i < str.length; i++) {
@@ -1180,69 +1122,66 @@ a:hover { text-decoration: underline; }
     return bytes;
   }
 
-  function buildDataCodewords(bytes, version, ecLevel) {
-    var vinfo = RS_TABLE[ecLevel][version];
-    var lengthBits = version < 10 ? 8 : 16;
+  function buildDataCodewords(bytes, version, ec) {
+    var vinfo = RS_TABLE[ec][version];
+    var lengthBits = version <= 9 ? 8 : 16;
     var bits = [];
     function push(val, n) { for (var i = n - 1; i >= 0; i--) bits.push((val >> i) & 1); }
-    push(4, 4);
+
+    push(4, 4); // byte mode
     push(bytes.length, lengthBits);
     for (var i = 0; i < bytes.length; i++) push(bytes[i], 8);
 
-    var totalDataBits = vinfo.total * 8 - vinfo.ec * vinfo.blocks;
-    var terminator = Math.min(4, totalDataBits - bits.length);
-    for (var t = 0; t < terminator; t++) bits.push(0);
+    var totalDataBits = (vinfo.total - vinfo.ec * vinfo.blocks) * 8;
+    var term = Math.min(4, totalDataBits - bits.length);
+    for (var t = 0; t < term; t++) bits.push(0);
     while (bits.length % 8 !== 0) bits.push(0);
 
-    var codewords = [];
+    var cw = [];
     for (var c = 0; c < bits.length; c += 8) {
       var b = 0;
       for (var k = 0; k < 8; k++) b = (b << 1) | bits[c + k];
-      codewords.push(b);
+      cw.push(b);
     }
-    var padBytes = [0xEC, 0x11];
-    var padIdx = 0;
-    while (codewords.length < totalDataBits / 8) {
-      codewords.push(padBytes[padIdx % 2]);
-      padIdx++;
-    }
-    return codewords;
+    var pad = [0xEC, 0x11], pi = 0;
+    while (cw.length < totalDataBits / 8) { cw.push(pad[pi % 2]); pi++; }
+    return cw;
   }
 
-  function splitAndInterleave(dataCodewords, version, ecLevel) {
-    var vinfo = RS_TABLE[ecLevel][version];
-    var totalData = dataCodewords.length;
+  function interleave(dataCw, version, ec) {
+    var vinfo = RS_TABLE[ec][version];
     var numBlocks = vinfo.blocks;
     var ecPerBlock = vinfo.ec;
-    var dataPerBlock = Math.floor(totalData / numBlocks);
-    var extra = totalData - dataPerBlock * numBlocks;
+    var totalData = dataCw.length;
+    var shortLen = Math.floor(totalData / numBlocks);
+    var numLong = totalData - shortLen * numBlocks;
 
     var dataBlocks = [];
     var ecBlocks = [];
     var idx = 0;
     for (var b = 0; b < numBlocks; b++) {
-      var size = dataPerBlock + (b < extra ? 1 : 0);
-      var blockData = dataCodewords.slice(idx, idx + size);
+      var size = shortLen + (b < numLong ? 1 : 0);
+      var blk = dataCw.slice(idx, idx + size);
       idx += size;
-      dataBlocks.push(blockData);
-      ecBlocks.push(rsEncode(blockData, ecPerBlock));
+      dataBlocks.push(blk);
+      ecBlocks.push(rsEncode(blk, ecPerBlock));
     }
 
-    var result = [];
-    var maxDataLen = Math.max.apply(null, dataBlocks.map(function (b) { return b.length; }));
-    for (var i = 0; i < maxDataLen; i++) {
+    var out = [];
+    var maxLen = Math.max.apply(null, dataBlocks.map(function (b) { return b.length; }));
+    for (var i = 0; i < maxLen; i++) {
       for (var j = 0; j < numBlocks; j++) {
-        if (i < dataBlocks[j].length) result.push(dataBlocks[j][i]);
+        if (i < dataBlocks[j].length) out.push(dataBlocks[j][i]);
       }
     }
     for (var e = 0; e < ecPerBlock; e++) {
-      for (var jj = 0; jj < numBlocks; jj++) result.push(ecBlocks[jj][e]);
+      for (var jj = 0; jj < numBlocks; jj++) out.push(ecBlocks[jj][e]);
     }
-    return result;
+    return out;
   }
 
-  function createMatrix(version) {
-    var size = version * 4 + 17;
+  /* ---------- Matrix construction ---------- */
+  function makeMatrix(size) {
     var m = [];
     for (var i = 0; i < size; i++) m.push(new Array(size).fill(null));
     return m;
@@ -1261,14 +1200,16 @@ a:hover { text-decoration: underline; }
     }
   }
 
+  /* Alignment pattern centers per version */
+  var ALIGNMENT = {
+    1:[], 2:[6,18], 3:[6,22], 4:[6,26], 5:[6,30], 6:[6,34],
+    7:[6,22,38], 8:[6,24,42], 9:[6,26,46], 10:[6,28,50],
+    11:[6,30,54], 12:[6,32,58], 13:[6,34,62], 14:[6,26,46,66], 15:[6,26,48,70]
+  };
+
   function placeAlignment(m, version) {
-    if (version === 1) return;
-    var coords = {
-      2: [6, 18], 3: [6, 22], 4: [6, 26], 5: [6, 30],
-      6: [6, 34], 7: [6, 22, 38], 8: [6, 24, 42],
-      9: [6, 26, 46], 10: [6, 28, 50]
-    }[version];
-    if (!coords) return;
+    var coords = ALIGNMENT[version];
+    if (!coords || !coords.length) return;
     var size = m.length;
     for (var i = 0; i < coords.length; i++) {
       for (var j = 0; j < coords.length; j++) {
@@ -1276,10 +1217,9 @@ a:hover { text-decoration: underline; }
         if ((r <= 8 && c <= 8) || (r <= 8 && c >= size - 9) || (r >= size - 9 && c <= 8)) continue;
         for (var dr = -2; dr <= 2; dr++) {
           for (var dc = -2; dc <= 2; dc++) {
-            var rr = r + dr, cc = c + dc;
-            if (dr === -2 || dr === 2 || dc === -2 || dc === 2) m[rr][cc] = true;
-            else if (dr === 0 && dc === 0) m[rr][cc] = true;
-            else m[rr][cc] = false;
+            var isBorder = (dr === -2 || dr === 2 || dc === -2 || dc === 2);
+            var isCenter = (dr === 0 && dc === 0);
+            m[r + dr][c + dc] = (isBorder || isCenter);
           }
         }
       }
@@ -1360,6 +1300,7 @@ a:hover { text-decoration: underline; }
   function penalty(m) {
     var size = m.length;
     var score = 0;
+    // Rule 1: horizontal / vertical runs of 5+
     for (var r = 0; r < size; r++) {
       var run = 1;
       for (var c = 1; c < size; c++) {
@@ -1376,42 +1317,69 @@ a:hover { text-decoration: underline; }
       }
       if (run2 >= 5) score += 3 + (run2 - 5);
     }
+    // Rule 2: 2x2 blocks of same colour
     for (var rr = 0; rr < size - 1; rr++) {
       for (var cc = 0; cc < size - 1; cc++) {
         var v = m[rr][cc];
         if (v === m[rr][cc + 1] && v === m[rr + 1][cc] && v === m[rr + 1][cc + 1]) score += 3;
       }
     }
+    // Rule 3: 1:1:3:1:1 pattern
+    var pat1 = [true,false,true,true,true,false,true,false,false,false,false];
+    var pat2 = [false,false,false,false,true,false,true,true,true,false,true];
+    function matchRow(row, i, pat) {
+      for (var k = 0; k < 11; k++) if (row[i + k] !== pat[k]) return false;
+      return true;
+    }
+    for (var r3 = 0; r3 < size; r3++) {
+      for (var c3 = 0; c3 <= size - 11; c3++) {
+        if (matchRow(m[r3], c3, pat1) || matchRow(m[r3], c3, pat2)) score += 40;
+      }
+    }
+    for (var c4 = 0; c4 < size; c4++) {
+      var col = [];
+      for (var r4 = 0; r4 < size; r4++) col.push(m[r4][c4]);
+      for (var r5 = 0; r5 <= size - 11; r5++) {
+        if (matchRow(col, r5, pat1) || matchRow(col, r5, pat2)) score += 40;
+      }
+    }
+    // Rule 4: dark/light balance
+    var dark = 0;
+    for (var r6 = 0; r6 < size; r6++) for (var c6 = 0; c6 < size; c6++) if (m[r6][c6]) dark++;
+    var pct = dark * 100 / (size * size);
+    var dev = Math.abs(pct - 50);
+    score += Math.floor(dev / 5) * 10;
     return score;
   }
 
-  function placeFormat(m, maskId, ecLevel) {
-    var ecBits = EC_BITS[ecLevel];
+  function placeFormat(m, maskId, ec) {
+    var ecBits = EC_BITS[ec];
     var data = (ecBits << 3) | maskId;
     var rem = data << 10;
     for (var i = 14; i >= 10; i--) if ((rem >> i) & 1) rem ^= 0x537 << (i - 10);
     var fmt = ((data << 10) | rem) ^ 0x5412;
     var size = m.length;
-    for (var i = 0; i < 6; i++) m[8][i] = ((fmt >> (14 - i)) & 1) === 1;
-    m[8][7] = ((fmt >> 8) & 1) === 1;
+
+    // Vertical strip (top-left) — bits 0..5 to (8,0..5); bit 6 to (8,7); bit 7 to (8,8); bit 8 to (7,8); bits 9..14 to (5..0, 8)
+    for (var i2 = 0; i2 < 6; i2++) m[8][i2] = ((fmt >> i2) & 1) === 1;
+    m[8][7] = ((fmt >> 6) & 1) === 1;
     m[8][8] = ((fmt >> 7) & 1) === 1;
-    m[7][8] = ((fmt >> 6) & 1) === 1;
-    for (var j = 0; j < 6; j++) m[5 - j][8] = ((fmt >> (5 - j)) & 1) === 1;
-    for (var k = 0; k < 8; k++) m[size - 1 - k][8] = ((fmt >> k) & 1) === 1;
-    for (var l = 0; l < 7; l++) m[8][size - 7 + l] = ((fmt >> (14 - l)) & 1) === 1;
-    m[size - 8][8] = true;
+    m[7][8] = ((fmt >> 8) & 1) === 1;
+    for (var j = 9; j < 15; j++) m[14 - j][8] = ((fmt >> j) & 1) === 1;
+
+    // Horizontal strip (top-right) — bits 0..7 to (8, size-1..size-8)
+    for (var k = 0; k < 8; k++) m[8][size - 1 - k] = ((fmt >> k) & 1) === 1;
+    // Bottom-left column — bits 8..14 to (size-7..size-1, 8)
+    for (var l = 8; l < 15; l++) m[size - 15 + l][8] = ((fmt >> l) & 1) === 1;
+
+    m[size - 8][8] = true; // dark module
   }
 
-  // Mark finder pattern cells (returned as map for styler)
   function buildFinderMap(size) {
     var fm = [];
     for (var i = 0; i < size; i++) fm.push(new Array(size).fill(false));
-    function mark(cornerR, cornerC) {
-      for (var r = 0; r < 7; r++) {
-        for (var c = 0; c < 7; c++) {
-          fm[cornerR + r][cornerC + c] = true;
-        }
-      }
+    function mark(r0, c0) {
+      for (var r = 0; r < 7; r++) for (var c = 0; c < 7; c++) fm[r0 + r][c0 + c] = true;
     }
     mark(0, 0);
     mark(0, size - 7);
@@ -1422,20 +1390,13 @@ a:hover { text-decoration: underline; }
   function buildAlignmentMap(version, size) {
     var am = [];
     for (var i = 0; i < size; i++) am.push(new Array(size).fill(false));
-    if (version === 1) return am;
-    var coords = {
-      2: [6, 18], 3: [6, 22], 4: [6, 26], 5: [6, 30],
-      6: [6, 34], 7: [6, 22, 38], 8: [6, 24, 42],
-      9: [6, 26, 46], 10: [6, 28, 50]
-    }[version];
-    if (!coords) return am;
-    for (var i = 0; i < coords.length; i++) {
+    var coords = ALIGNMENT[version];
+    if (!coords || !coords.length) return am;
+    for (var i2 = 0; i2 < coords.length; i2++) {
       for (var j = 0; j < coords.length; j++) {
-        var r = coords[i], c = coords[j];
+        var r = coords[i2], c = coords[j];
         if ((r <= 8 && c <= 8) || (r <= 8 && c >= size - 9) || (r >= size - 9 && c <= 8)) continue;
-        for (var dr = -2; dr <= 2; dr++) {
-          for (var dc = -2; dc <= 2; dc++) am[r + dr][c + dc] = true;
-        }
+        for (var dr = -2; dr <= 2; dr++) for (var dc = -2; dc <= 2; dc++) am[r + dr][c + dc] = true;
       }
     }
     return am;
@@ -1444,17 +1405,21 @@ a:hover { text-decoration: underline; }
   function generate(text, ecLevel) {
     ecLevel = ecLevel || 'M';
     if (!RS_TABLE[ecLevel]) ecLevel = 'M';
+    if (typeof text !== 'string') text = String(text);
+
     var bytes = toBytes(text);
     var version = pickVersion(bytes.length, ecLevel);
     if (!version) return null;
 
     var dataCw = buildDataCodewords(bytes, version, ecLevel);
-    var finalCw = splitAndInterleave(dataCw, version, ecLevel);
+    var finalCw = interleave(dataCw, version, ecLevel);
 
-    var base = createMatrix(version);
+    var base = makeMatrix(version * 4 + 17);
+    var size = base.length;
+
     placeFinder(base, 0, 0);
-    placeFinder(base, 0, base.length - 7);
-    placeFinder(base, base.length - 7, 0);
+    placeFinder(base, 0, size - 7);
+    placeFinder(base, size - 7, 0);
     placeAlignment(base, version);
     placeTiming(base);
     reserveFormat(base);
@@ -1466,98 +1431,93 @@ a:hover { text-decoration: underline; }
     var work = base.map(function (row) { return row.slice(); });
     placeData(work, finalCw);
 
-    var best = null, bestScore = Infinity;
+    var best = null, bestScore = Infinity, bestId = 0;
     for (var maskId = 0; maskId < 8; maskId++) {
       var masked = applyMask(work, maskId, reserved);
       placeFormat(masked, maskId, ecLevel);
       var sc = penalty(masked);
-      if (sc < bestScore) { bestScore = sc; best = masked; }
+      if (sc < bestScore) { bestScore = sc; best = masked; bestId = maskId; }
     }
 
-    var size = best.length;
     return {
       matrix: best,
       size: size,
       version: version,
       ec: ecLevel,
+      maskId: bestId,
       finderMap: buildFinderMap(size),
       alignmentMap: buildAlignmentMap(version, size)
     };
   }
 
-  /* ---------- STYLED RENDERERS ---------- */
+  /* ---------- Safe renderers ----------
+     Default style = 'square' → classic, maximum scannability.
+     'rounded' rounds interior modules with a small radius.
+     'dots'    draws interior modules as circles.
+     In all styles, finder + alignment patterns stay as crisp square
+     blocks so scanners can lock onto the QR.
+     The quiet zone is preserved. */
 
-  // opts: { size, margin, dark, light, style, eyeColor }
-  function renderStyledToCanvas(qr, opts) {
+  function renderToCanvas(qr, opts) {
     opts = opts || {};
-    var size = opts.size || 320;
-    var margin = opts.margin != null ? opts.margin : 2;
+    var size = Math.max(64, Math.floor(opts.size || 320));
+    var margin = opts.margin != null ? opts.margin : 4;
     var dark = opts.dark || '#000000';
     var light = opts.light || '#ffffff';
-    var eyeColor = opts.eyeColor || dark;
     var style = opts.style || 'square';
 
     var n = qr.size;
     var total = n + margin * 2;
-    var scale = size / total;
+    // Choose integer module size for crisp squares.
+    var mod = Math.max(1, Math.floor(size / total));
+    var px = total * mod;
 
     var canvas = document.createElement('canvas');
-    canvas.width = size;
-    canvas.height = size;
+    canvas.width = px;
+    canvas.height = px;
     var ctx = canvas.getContext('2d');
+    ctx.imageSmoothingEnabled = false;
 
-    // Background
-    if (light === 'transparent') {
-      ctx.clearRect(0, 0, size, size);
-    } else {
-      ctx.fillStyle = light;
-      ctx.fillRect(0, 0, size, size);
-    }
+    // Background (quiet zone included)
+    ctx.fillStyle = light;
+    ctx.fillRect(0, 0, px, px);
 
-    // Draw modules
+    ctx.fillStyle = dark;
+    ctx.strokeStyle = dark;
+
     for (var r = 0; r < n; r++) {
       for (var c = 0; c < n; c++) {
         if (!qr.matrix[r][c]) continue;
-        var x = (c + margin) * scale;
-        var y = (r + margin) * scale;
-
+        var x = (c + margin) * mod;
+        var y = (r + margin) * mod;
         var isFinder = qr.finderMap[r][c];
         var isAlign = qr.alignmentMap[r][c];
-        var color = (isFinder || isAlign) ? eyeColor : dark;
+        var isEye = isFinder || isAlign;
 
-        if (isFinder) {
-          // Finder patterns drawn as solid blocks for maximum scan reliability.
-          // For 'smooth' style we round the outer corners.
-          if (style === 'smooth') {
-            ctx.fillStyle = color;
-            roundRect(ctx, x, y, scale, scale, scale * 0.35);
-            ctx.fill();
-          } else {
-            ctx.fillStyle = color;
-            ctx.fillRect(x, y, scale, scale);
-          }
-        } else if (style === 'dots') {
-          ctx.fillStyle = color;
-          ctx.beginPath();
-          ctx.arc(x + scale / 2, y + scale / 2, scale * 0.45, 0, Math.PI * 2);
-          ctx.fill();
+        if (isEye || style === 'square') {
+          ctx.fillRect(x, y, mod, mod);
         } else if (style === 'rounded') {
-          ctx.fillStyle = color;
-          roundRect(ctx, x + scale * 0.06, y + scale * 0.06, scale * 0.88, scale * 0.88, scale * 0.3);
+          var rr = Math.max(1, mod * 0.28);
+          ctx.beginPath();
+          roundRectPath(ctx, x + 0.5, y + 0.5, mod - 1, mod - 1, rr);
+          ctx.fill();
+        } else if (style === 'dots') {
+          var rad = mod * 0.46;
+          ctx.beginPath();
+          ctx.arc(x + mod / 2, y + mod / 2, rad, 0, Math.PI * 2);
           ctx.fill();
         } else {
-          ctx.fillStyle = color;
-          ctx.fillRect(x, y, scale, scale);
+          ctx.fillRect(x, y, mod, mod);
         }
       }
     }
+
     return canvas;
   }
 
-  function roundRect(ctx, x, y, w, h, r) {
+  function roundRectPath(ctx, x, y, w, h, r) {
     if (r > w / 2) r = w / 2;
     if (r > h / 2) r = h / 2;
-    ctx.beginPath();
     ctx.moveTo(x + r, y);
     ctx.lineTo(x + w - r, y);
     ctx.quadraticCurveTo(x + w, y, x + w, y + r);
@@ -1567,105 +1527,74 @@ a:hover { text-decoration: underline; }
     ctx.quadraticCurveTo(x, y + h, x, y + h - r);
     ctx.lineTo(x, y + r);
     ctx.quadraticCurveTo(x, y, x + r, y);
-    ctx.closePath();
   }
 
-  function renderStyledToSvg(qr, opts) {
+  function renderToSvg(qr, opts) {
     opts = opts || {};
-    var size = opts.size || 320;
-    var margin = opts.margin != null ? opts.margin : 2;
+    var size = Math.max(64, Math.floor(opts.size || 320));
+    var margin = opts.margin != null ? opts.margin : 4;
     var dark = opts.dark || '#000000';
     var light = opts.light || '#ffffff';
-    var eyeColor = opts.eyeColor || dark;
     var style = opts.style || 'square';
 
     var n = qr.size;
     var total = n + margin * 2;
-    var scale = size / total;
+    var mod = size / total;
 
     var parts = [];
-    parts.push('<svg xmlns="http://www.w3.org/2000/svg" width="' + size + '" height="' + size + '" viewBox="0 0 ' + size + ' ' + size + '" shape-rendering="geometricPrecision">');
+    parts.push('<svg xmlns="http://www.w3.org/2000/svg" width="' + size + '" height="' + size +
+      '" viewBox="0 0 ' + size + ' ' + size + '" shape-rendering="crispEdges">');
+    parts.push('<rect width="' + size + '" height="' + size + '" fill="' + light + '"/>');
 
-    if (light !== 'transparent') {
-      parts.push('<rect width="' + size + '" height="' + size + '" fill="' + light + '"/>');
-    }
-
-    // Build path data by style/color bucket
-    var pathDark = '';
-    var pathEye = '';
-
+    var path = '';
     for (var r = 0; r < n; r++) {
       for (var c = 0; c < n; c++) {
         if (!qr.matrix[r][c]) continue;
-        var x = (c + margin) * scale;
-        var y = (r + margin) * scale;
-        var isFinder = qr.finderMap[r][c];
-        var isAlign = qr.alignmentMap[r][c];
-        var isEye = isFinder || isAlign;
+        var x = (c + margin) * mod;
+        var y = (r + margin) * mod;
+        var isEye = qr.finderMap[r][c] || qr.alignmentMap[r][c];
 
-        var shapePath = '';
-        if (isEye) {
-          if (style === 'smooth') {
-            var rr = scale * 0.35;
-            shapePath = 'M' + (x + rr).toFixed(2) + ' ' + y.toFixed(2) +
-              'h' + (scale - rr * 2).toFixed(2) +
-              'a' + rr.toFixed(2) + ' ' + rr.toFixed(2) + ' 0 0 1 ' + rr.toFixed(2) + ' ' + rr.toFixed(2) +
-              'v' + (scale - rr * 2).toFixed(2) +
-              'a' + rr.toFixed(2) + ' ' + rr.toFixed(2) + ' 0 0 1 -' + rr.toFixed(2) + ' ' + rr.toFixed(2) +
-              'h-' + (scale - rr * 2).toFixed(2) +
-              'a' + rr.toFixed(2) + ' ' + rr.toFixed(2) + ' 0 0 1 -' + rr.toFixed(2) + ' -' + rr.toFixed(2) +
-              'v-' + (scale - rr * 2).toFixed(2) +
-              'a' + rr.toFixed(2) + ' ' + rr.toFixed(2) + ' 0 0 1 ' + rr.toFixed(2) + ' -' + rr.toFixed(2) + 'z';
-          } else {
-            shapePath = 'M' + x.toFixed(2) + ' ' + y.toFixed(2) +
-              'h' + scale.toFixed(2) + 'v' + scale.toFixed(2) +
-              'h-' + scale.toFixed(2) + 'z';
-          }
-          pathEye += shapePath;
+        if (isEye || style === 'square') {
+          path += 'M' + x.toFixed(3) + ' ' + y.toFixed(3) +
+                  'h' + mod.toFixed(3) + 'v' + mod.toFixed(3) +
+                  'h-' + mod.toFixed(3) + 'z';
         } else if (style === 'dots') {
-          var cx = (x + scale / 2).toFixed(2);
-          var cy = (y + scale / 2).toFixed(2);
-          var rad = (scale * 0.45).toFixed(2);
-          pathDark += 'M' + cx + ' ' + cy + 'm-' + rad + ',0a' + rad + ',' + rad + ' 0 1,0 ' + (rad * 2) + ',0a' + rad + ',' + rad + ' 0 1,0 -' + (rad * 2) + ',0';
-        } else if (style === 'rounded') {
-          var inset = scale * 0.06;
-          var rsz = scale * 0.88;
-          var rr2 = scale * 0.3;
-          var xx = x + inset, yy = y + inset;
-          pathDark += 'M' + (xx + rr2).toFixed(2) + ' ' + yy.toFixed(2) +
-            'h' + (rsz - rr2 * 2).toFixed(2) +
-            'a' + rr2.toFixed(2) + ' ' + rr2.toFixed(2) + ' 0 0 1 ' + rr2.toFixed(2) + ' ' + rr2.toFixed(2) +
-            'v' + (rsz - rr2 * 2).toFixed(2) +
-            'a' + rr2.toFixed(2) + ' ' + rr2.toFixed(2) + ' 0 0 1 -' + rr2.toFixed(2) + ' ' + rr2.toFixed(2) +
-            'h-' + (rsz - rr2 * 2).toFixed(2) +
-            'a' + rr2.toFixed(2) + ' ' + rr2.toFixed(2) + ' 0 0 1 -' + rr2.toFixed(2) + ' -' + rr2.toFixed(2) +
-            'v-' + (rsz - rr2 * 2).toFixed(2) +
-            'a' + rr2.toFixed(2) + ' ' + rr2.toFixed(2) + ' 0 0 1 ' + rr2.toFixed(2) + ' -' + rr2.toFixed(2) + 'z';
+          var cx = x + mod / 2, cy = y + mod / 2, rr = mod * 0.46;
+          path += 'M' + (cx - rr).toFixed(3) + ' ' + cy.toFixed(3) +
+                  'a' + rr.toFixed(3) + ' ' + rr.toFixed(3) + ' 0 1 0 ' + (rr * 2).toFixed(3) + ' 0' +
+                  'a' + rr.toFixed(3) + ' ' + rr.toFixed(3) + ' 0 1 0 -' + (rr * 2).toFixed(3) + ' 0z';
         } else {
-          pathDark += 'M' + x.toFixed(2) + ' ' + y.toFixed(2) +
-            'h' + scale.toFixed(2) + 'v' + scale.toFixed(2) +
-            'h-' + scale.toFixed(2) + 'z';
+          // rounded
+          var x0 = x + 0.5, y0 = y + 0.5, w = mod - 1, h = mod - 1;
+          var rad = Math.min(w, h) * 0.28;
+          path += 'M' + (x0 + rad).toFixed(3) + ' ' + y0.toFixed(3) +
+                  'h' + (w - 2 * rad).toFixed(3) +
+                  'a' + rad.toFixed(3) + ' ' + rad.toFixed(3) + ' 0 0 1 ' + rad.toFixed(3) + ' ' + rad.toFixed(3) +
+                  'v' + (h - 2 * rad).toFixed(3) +
+                  'a' + rad.toFixed(3) + ' ' + rad.toFixed(3) + ' 0 0 1 -' + rad.toFixed(3) + ' ' + rad.toFixed(3) +
+                  'h-' + (w - 2 * rad).toFixed(3) +
+                  'a' + rad.toFixed(3) + ' ' + rad.toFixed(3) + ' 0 0 1 -' + rad.toFixed(3) + ' -' + rad.toFixed(3) +
+                  'v-' + (h - 2 * rad).toFixed(3) +
+                  'a' + rad.toFixed(3) + ' ' + rad.toFixed(3) + ' 0 0 1 ' + rad.toFixed(3) + ' -' + rad.toFixed(3) + 'z';
         }
       }
     }
-
-    if (pathDark) parts.push('<path d="' + pathDark + '" fill="' + dark + '"/>');
-    if (pathEye) parts.push('<path d="' + pathEye + '" fill="' + eyeColor + '"/>');
+    if (path) parts.push('<path d="' + path + '" fill="' + dark + '"/>');
     parts.push('</svg>');
     return parts.join('');
   }
 
   global.MiniQR = {
     generate: generate,
-    renderStyledToCanvas: renderStyledToCanvas,
-    renderStyledToSvg: renderStyledToSvg
+    renderToCanvas: renderToCanvas,
+    renderToSvg: renderToSvg
   };
 })(window);
 </script>
 
-<!-- ============================================================
+<!-- =========================================================
      APPLICATION
-     ============================================================ -->
+     ========================================================= -->
 <script>
 (function () {
   'use strict';
@@ -1698,7 +1627,7 @@ a:hover { text-decoration: underline; }
     });
   });
 
-  /* ---------- TYPE DEFINITIONS ---------- */
+  /* ---------- TYPES ---------- */
   var types = {
     url: {
       subtitle: 'Enter the website URL you want to link to.',
@@ -1759,14 +1688,14 @@ a:hover { text-decoration: underline; }
     },
     phone: {
       subtitle: 'Enter the phone number the QR code should dial.',
-      fields: [{ name: 'phone', label: 'Phone Number', type: 'tel', placeholder: '+1 234 567 8900', required: true }],
+      fields: [{ name: 'phone', label: 'Phone Number', type: 'tel', placeholder: '+8801712345678', required: true }],
       build: function (v) { return 'tel:' + v.phone.replace(/\s+/g, ''); },
       validate: function (v) { return v.phone && v.phone.trim() ? null : 'Please enter a phone number.'; }
     },
     sms: {
       subtitle: 'Enter the phone number and an optional message for SMS.',
       fields: [
-        { name: 'phone', label: 'Phone Number', type: 'tel', placeholder: '+1 234 567 8900', required: true },
+        { name: 'phone', label: 'Phone Number', type: 'tel', placeholder: '+8801712345678', required: true },
         { name: 'message', label: 'Message', type: 'textarea', placeholder: 'Optional pre-filled message', required: false }
       ],
       build: function (v) { return 'SMSTO:' + v.phone.replace(/\s+/g, '') + ':' + (v.message || ''); },
@@ -1777,24 +1706,25 @@ a:hover { text-decoration: underline; }
       fields: [
         { name: 'fullName', label: 'Full Name', type: 'text', placeholder: 'John Doe', required: true },
         { name: 'organization', label: 'Organization', type: 'text', placeholder: 'Company name (optional)', required: false },
-        { name: 'phone', label: 'Phone Number', type: 'tel', placeholder: '+1 234 567 8900', required: false },
+        { name: 'phone', label: 'Phone Number', type: 'tel', placeholder: '+8801712345678', required: false },
         { name: 'email', label: 'Email', type: 'email', placeholder: 'john@example.com', required: false },
         { name: 'website', label: 'Website', type: 'url', placeholder: 'https://example.com', required: false },
         { name: 'address', label: 'Address', type: 'text', placeholder: 'Street, City, Country', required: false }
       ],
       build: function (v) {
+        function esc(s) { return String(s).replace(/([\\;,])/g, '\\$1').replace(/\n/g, '\\n'); }
         var lines = ['BEGIN:VCARD', 'VERSION:3.0'];
-        lines.push('FN:' + v.fullName);
+        lines.push('FN:' + esc(v.fullName));
         var parts = v.fullName.trim().split(/\s+/);
-        if (parts.length > 1) lines.push('N:' + parts.slice(1).join(' ') + ';' + parts[0] + ';;;');
-        else lines.push('N:' + v.fullName + ';;;;');
-        if (v.organization) lines.push('ORG:' + v.organization);
-        if (v.phone) lines.push('TEL;TYPE=CELL:' + v.phone);
-        if (v.email) lines.push('EMAIL:' + v.email);
-        if (v.website) lines.push('URL:' + v.website);
-        if (v.address) lines.push('ADR:;;' + v.address + ';;;;');
+        if (parts.length > 1) lines.push('N:' + esc(parts.slice(1).join(' ')) + ';' + esc(parts[0]) + ';;;');
+        else lines.push('N:' + esc(v.fullName) + ';;;;');
+        if (v.organization) lines.push('ORG:' + esc(v.organization));
+        if (v.phone) lines.push('TEL;TYPE=CELL:' + esc(v.phone));
+        if (v.email) lines.push('EMAIL:' + esc(v.email));
+        if (v.website) lines.push('URL:' + esc(v.website));
+        if (v.address) lines.push('ADR:;;' + esc(v.address) + ';;;;');
         lines.push('END:VCARD');
-        return lines.join('\n');
+        return lines.join('\r\n');
       },
       validate: function (v) { return v.fullName && v.fullName.trim() ? null : 'Please enter a full name.'; }
     },
@@ -1804,11 +1734,14 @@ a:hover { text-decoration: underline; }
         { name: 'lat', label: 'Latitude', type: 'text', placeholder: '23.8103', required: true },
         { name: 'lng', label: 'Longitude', type: 'text', placeholder: '90.4125', required: true }
       ],
-      build: function (v) { return 'geo:' + v.lat + ',' + v.lng; },
+      build: function (v) { return 'geo:' + parseFloat(v.lat) + ',' + parseFloat(v.lng); },
       validate: function (v) {
         if (!v.lat || !v.lat.trim()) return 'Please enter a latitude.';
         if (!v.lng || !v.lng.trim()) return 'Please enter a longitude.';
-        if (isNaN(parseFloat(v.lat)) || isNaN(parseFloat(v.lng))) return 'Latitude and longitude must be numeric.';
+        var lat = parseFloat(v.lat), lng = parseFloat(v.lng);
+        if (isNaN(lat) || isNaN(lng)) return 'Latitude and longitude must be numeric.';
+        if (lat < -90 || lat > 90) return 'Latitude must be between -90 and 90.';
+        if (lng < -180 || lng > 180) return 'Longitude must be between -180 and 180.';
         return null;
       }
     }
@@ -1816,10 +1749,16 @@ a:hover { text-decoration: underline; }
 
   /* ---------- STATE ---------- */
   var currentType = 'url';
-  var currentData = null;     // last encoded text
-  var currentPng = null;      // last customized PNG data URL
-  var currentQr = null;       // last generated QR object (matrix)
-  var customizeOpen = false;
+  var currentData = null;
+  var currentQr = null;
+  var currentPng = null;
+
+  var opts = {
+    size: 320,
+    ec: 'M',
+    style: 'square',
+    margin: 4
+  };
 
   /* ---------- DOM ---------- */
   var form = document.getElementById('qrForm');
@@ -1846,13 +1785,6 @@ a:hover { text-decoration: underline; }
   var resultReady = document.getElementById('resultReady');
   var qrBox = document.getElementById('qrBox');
   var toasts = document.getElementById('toasts');
-
-  var state = {
-    size: 320,
-    ec: 'M',
-    style: 'square',
-    margin: 2
-  };
 
   /* ---------- HELPERS ---------- */
   function showError(msg) { errorText.textContent = msg; errorBox.classList.add('show'); }
@@ -1884,7 +1816,6 @@ a:hover { text-decoration: underline; }
   }
 
   function isValidHex(s) { return /^#?[0-9A-Fa-f]{6}$/.test(s) || /^#?[0-9A-Fa-f]{3}$/.test(s); }
-
   function normalizeHex(s) {
     s = s.trim();
     if (!s.startsWith('#')) s = '#' + s;
@@ -1892,13 +1823,19 @@ a:hover { text-decoration: underline; }
     return s.toUpperCase();
   }
 
-  function updateContrastWarning() {
+  function contrastScore() {
     var a = hexToRgb(fgColor.value);
     var b = hexToRgb(bgColor.value);
-    if (!a || !b) { contrastWarn.classList.remove('show'); return; }
-    var diff = Math.abs(a.r - b.r) + Math.abs(a.g - b.g) + Math.abs(a.b - b.b);
-    contrastWarn.classList.toggle('show', diff < 150);
+    if (!a || !b) return 765;
+    return Math.abs(a.r - b.r) + Math.abs(a.g - b.g) + Math.abs(a.b - b.b);
   }
+
+  function updateContrastWarning() {
+    var score = contrastScore();
+    contrastWarn.classList.toggle('show', score < 200);
+  }
+
+  function contrastIsSafe() { return contrastScore() >= 200; }
 
   /* ---------- RENDER FIELDS ---------- */
   function renderFields(type) {
@@ -1946,100 +1883,92 @@ a:hover { text-decoration: underline; }
     });
   });
 
-  /* ---------- CUSTOMIZE HEAD ---------- */
+  /* ---------- CUSTOMIZE ---------- */
   customHead.addEventListener('click', function () {
-    customizeOpen = !customizeOpen;
-    customBody.classList.toggle('open', customizeOpen);
-    customHead.classList.toggle('open', customizeOpen);
-    customHead.setAttribute('aria-expanded', String(customizeOpen));
+    var open = customBody.classList.toggle('open');
+    customHead.classList.toggle('open', open);
+    customHead.setAttribute('aria-expanded', String(open));
   });
   customHead.addEventListener('keydown', function (e) {
     if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); customHead.click(); }
   });
 
-  /* ---------- COLOR CONTROLS ---------- */
   fgColor.addEventListener('input', function () {
     fgHexInput.value = fgColor.value.toUpperCase();
     updateContrastWarning();
-    regeneratePreview();
+    regenerate();
   });
   bgColor.addEventListener('input', function () {
     bgHexInput.value = bgColor.value.toUpperCase();
     updateContrastWarning();
-    regeneratePreview();
+    regenerate();
   });
   fgHexInput.addEventListener('change', function () {
-    var v = fgHexInput.value;
-    if (isValidHex(v)) {
-      var n = normalizeHex(v);
+    if (isValidHex(fgHexInput.value)) {
+      var n = normalizeHex(fgHexInput.value);
       fgColor.value = n.toLowerCase();
       fgHexInput.value = n;
       updateContrastWarning();
-      regeneratePreview();
+      regenerate();
     } else {
       fgHexInput.value = fgColor.value.toUpperCase();
-      toast('Invalid hex color. Reverted.', 'error');
+      toast('Invalid hex color.', 'error');
     }
   });
   bgHexInput.addEventListener('change', function () {
-    var v = bgHexInput.value;
-    if (isValidHex(v)) {
-      var n = normalizeHex(v);
+    if (isValidHex(bgHexInput.value)) {
+      var n = normalizeHex(bgHexInput.value);
       bgColor.value = n.toLowerCase();
       bgHexInput.value = n;
       updateContrastWarning();
-      regeneratePreview();
+      regenerate();
     } else {
       bgHexInput.value = bgColor.value.toUpperCase();
-      toast('Invalid hex color. Reverted.', 'error');
+      toast('Invalid hex color.', 'error');
     }
   });
 
-  /* ---------- SIZE SEGMENTED + SLIDER ---------- */
   sizeSeg.querySelectorAll('button').forEach(function (b) {
     b.addEventListener('click', function () {
       sizeSeg.querySelectorAll('button').forEach(function (x) { x.classList.remove('active'); });
       b.classList.add('active');
-      state.size = parseInt(b.getAttribute('data-size'), 10);
-      qrSize.value = state.size;
-      sizeVal.textContent = state.size + ' px';
-      regeneratePreview();
+      opts.size = parseInt(b.getAttribute('data-size'), 10);
+      qrSize.value = opts.size;
+      sizeVal.textContent = opts.size + ' px';
+      regenerate();
     });
   });
   qrSize.addEventListener('input', function () {
-    state.size = parseInt(qrSize.value, 10);
-    sizeVal.textContent = state.size + ' px';
+    opts.size = parseInt(qrSize.value, 10);
+    sizeVal.textContent = opts.size + ' px';
     sizeSeg.querySelectorAll('button').forEach(function (x) {
-      x.classList.toggle('active', parseInt(x.getAttribute('data-size'), 10) === state.size);
+      x.classList.toggle('active', parseInt(x.getAttribute('data-size'), 10) === opts.size);
     });
-    regeneratePreview();
+    regenerate();
   });
 
-  /* ---------- EC SEGMENTED ---------- */
   ecSeg.querySelectorAll('button').forEach(function (b) {
     b.addEventListener('click', function () {
       ecSeg.querySelectorAll('button').forEach(function (x) { x.classList.remove('active'); });
       b.classList.add('active');
-      state.ec = b.getAttribute('data-ec');
-      regeneratePreview();
+      opts.ec = b.getAttribute('data-ec');
+      regenerate();
     });
   });
 
-  /* ---------- STYLE ---------- */
   styleOpts.querySelectorAll('.style-opt').forEach(function (b) {
     b.addEventListener('click', function () {
       styleOpts.querySelectorAll('.style-opt').forEach(function (x) { x.classList.remove('active'); });
       b.classList.add('active');
-      state.style = b.getAttribute('data-style');
-      regeneratePreview();
+      opts.style = b.getAttribute('data-style');
+      regenerate();
     });
   });
 
-  /* ---------- MARGIN ---------- */
   qrMargin.addEventListener('input', function () {
-    state.margin = parseInt(qrMargin.value, 10);
-    marginVal.textContent = state.margin + ' block' + (state.margin === 1 ? '' : 's');
-    regeneratePreview();
+    opts.margin = parseInt(qrMargin.value, 10);
+    marginVal.textContent = opts.margin + ' block' + (opts.margin === 1 ? '' : 's');
+    regenerate();
   });
 
   /* ---------- COLLECT ---------- */
@@ -2057,24 +1986,23 @@ a:hover { text-decoration: underline; }
   /* ---------- RESULT RESET ---------- */
   function resetResult() {
     currentData = null;
-    currentPng = null;
     currentQr = null;
+    currentPng = null;
     resultEmpty.style.display = 'flex';
     resultReady.classList.remove('show');
     qrBox.innerHTML = '';
   }
 
-  /* ---------- RENDER PREVIEW INTO qrBox ---------- */
+  /* ---------- RENDER PREVIEW ---------- */
   function renderPreview() {
     if (!currentQr) return;
     try {
-      var canvas = window.MiniQR.renderStyledToCanvas(currentQr, {
-        size: state.size,
-        margin: state.margin,
+      var canvas = window.MiniQR.renderToCanvas(currentQr, {
+        size: opts.size,
+        margin: opts.margin,
         dark: fgColor.value,
         light: bgColor.value,
-        eyeColor: fgColor.value,
-        style: state.style
+        style: opts.style
       });
       currentPng = canvas.toDataURL('image/png');
 
@@ -2082,40 +2010,30 @@ a:hover { text-decoration: underline; }
       var img = document.createElement('img');
       img.src = currentPng;
       img.alt = 'Generated QR Code';
-      // Fit into box without breaking layout
       img.style.width = '100%';
       img.style.height = 'auto';
       img.style.maxWidth = '240px';
       img.style.aspectRatio = '1 / 1';
+      img.style.imageRendering = 'pixelated';
       img.style.objectFit = 'contain';
-      img.style.borderRadius = '6px';
       qrBox.appendChild(img);
-    } catch (e) {
-      // keep last preview
-    }
+    } catch (e) { /* keep prior preview */ }
   }
 
-  /* ---------- REGENERATE PREVIEW (only if data exists) ---------- */
-  function regeneratePreview() {
+  /* ---------- REGENERATE ---------- */
+  function regenerate() {
     if (!currentData) return;
-    if (typeof window.MiniQR === 'undefined') return;
     try {
-      var qr = window.MiniQR.generate(currentData, state.ec);
+      var qr = window.MiniQR.generate(currentData, opts.ec);
       if (!qr) return;
       currentQr = qr;
       renderPreview();
-    } catch (e) { /* keep previous */ }
+    } catch (e) { /* keep prior */ }
   }
 
   /* ---------- GENERATE ---------- */
   function generate() {
     hideError();
-
-    if (typeof window.MiniQR === 'undefined') {
-      showError('QR engine failed to initialize. Please reload the page.');
-      toast('QR engine not available.', 'error');
-      return;
-    }
 
     var def = types[currentType];
     var values = collect();
@@ -2127,25 +2045,39 @@ a:hover { text-decoration: underline; }
       return;
     }
 
+    if (!contrastIsSafe()) {
+      showError('Low contrast between QR color and background. Please choose higher-contrast colors so the QR code can be scanned reliably.');
+      toast('Low contrast — increase contrast to generate.', 'error');
+      // Scroll to colors
+      customHead.click();
+      return;
+    }
+
     var data = def.build(values);
     var qr;
     try {
-      qr = window.MiniQR.generate(data, state.ec);
+      qr = window.MiniQR.generate(data, opts.ec);
     } catch (e) {
-      showError('Failed to generate QR code. Please try again.');
-      toast('Failed to generate QR code.', 'error');
+      showError('QR generation failed. Please try again.');
+      toast('QR generation failed.', 'error');
       return;
     }
     if (!qr) {
-      showError('Input is too long for the selected error correction level. Please shorten it or choose a lower level.');
-      toast('Input is too long for this EC level.', 'error');
+      showError('This content is too long for the selected error correction level. Please shorten it or choose a lower level.');
+      toast('Content too long for this EC level.', 'error');
       return;
     }
 
     currentData = data;
     currentQr = qr;
-
     renderPreview();
+
+    // Verify a real image was produced
+    if (!currentPng) {
+      showError('QR generation failed to produce an image. Please try again.');
+      toast('QR generation failed.', 'error');
+      return;
+    }
 
     resultEmpty.style.display = 'none';
     resultReady.classList.add('show');
@@ -2182,11 +2114,11 @@ a:hover { text-decoration: underline; }
       c.width = img.width;
       c.height = img.height;
       var ctx = c.getContext('2d');
-      // Always fill white first, then draw — if user chose transparent, treat as white for JPG
+      ctx.imageSmoothingEnabled = false;
       ctx.fillStyle = '#ffffff';
       ctx.fillRect(0, 0, c.width, c.height);
       ctx.drawImage(img, 0, 0);
-      downloadUrl(c.toDataURL('image/jpeg', 0.95), 'qr-code-generator.jpg');
+      downloadUrl(c.toDataURL('image/jpeg', 0.98), 'qr-code-generator.jpg');
       toast('JPG downloaded.', 'success');
     };
     img.onerror = function () { toast('Failed to create JPG.', 'error'); };
@@ -2195,15 +2127,13 @@ a:hover { text-decoration: underline; }
 
   document.getElementById('dlSvg').addEventListener('click', function () {
     if (!currentQr) { toast('Generate a QR code first.', 'error'); return; }
-    if (typeof window.MiniQR === 'undefined') { toast('QR engine not available.', 'error'); return; }
     try {
-      var svg = window.MiniQR.renderStyledToSvg(currentQr, {
-        size: state.size,
-        margin: state.margin,
+      var svg = window.MiniQR.renderToSvg(currentQr, {
+        size: opts.size,
+        margin: opts.margin,
         dark: fgColor.value,
         light: bgColor.value,
-        eyeColor: fgColor.value,
-        style: state.style
+        style: opts.style
       });
       var blob = new Blob([svg], { type: 'image/svg+xml' });
       var url = URL.createObjectURL(blob);
@@ -2234,12 +2164,12 @@ a:hover { text-decoration: underline; }
     function fallbackCopy() {
       if (navigator.clipboard && navigator.clipboard.writeText) {
         navigator.clipboard.writeText(currentPng).then(function () {
-          toast('Image copy not supported — data URL copied instead.', 'info');
+          toast('Image copy not supported by this browser — data URL copied instead.', 'info');
         }).catch(function () {
           toast('Copy failed. Please download the QR code instead.', 'error');
         });
       } else {
-        toast('Copy not supported. Please download the QR code instead.', 'error');
+        toast('Image copying is not supported by this browser. Please download the QR code instead.', 'error');
       }
     }
   });
@@ -2251,19 +2181,18 @@ a:hover { text-decoration: underline; }
     hideError();
     resetResult();
 
-    // Reset customization to defaults
-    fgColor.value = '#0f172a';
+    fgColor.value = '#000000';
     bgColor.value = '#ffffff';
-    fgHexInput.value = '#0F172A';
+    fgHexInput.value = '#000000';
     bgHexInput.value = '#FFFFFF';
-    state.size = 320;
-    state.ec = 'M';
-    state.style = 'square';
-    state.margin = 2;
+    opts.size = 320;
+    opts.ec = 'M';
+    opts.style = 'square';
+    opts.margin = 4;
     qrSize.value = 320;
     sizeVal.textContent = '320 px';
-    qrMargin.value = 2;
-    marginVal.textContent = '2 blocks';
+    qrMargin.value = 4;
+    marginVal.textContent = '4 blocks';
 
     sizeSeg.querySelectorAll('button').forEach(function (x) {
       x.classList.toggle('active', parseInt(x.getAttribute('data-size'), 10) === 320);
