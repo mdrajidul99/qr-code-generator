@@ -74,7 +74,7 @@
     { "@type": "Question", "name": "What is a QR Code?", "acceptedAnswer": { "@type": "Answer", "text": "A QR (Quick Response) code is a square 2D barcode that stores information like a website URL, text, Wi-Fi credentials, or contact details. Smartphone cameras can scan it instantly." } },
     { "@type": "Question", "name": "Is this QR Code Generator free?", "acceptedAnswer": { "@type": "Answer", "text": "Yes, this QR Code Generator is completely free. No signup, no login, and no watermark on generated QR codes." } },
     { "@type": "Question", "name": "Do I need an account?", "acceptedAnswer": { "@type": "Answer", "text": "No. You can create QR codes instantly without any registration or account." } },
-    { "@type": "Question", "name": "What types of QR codes can I create?", "acceptedAnswer": { "@type": "Answer", "text": "You can create QR codes for URL, plain text, Wi-Fi, email, phone, SMS, contact (vCard), and location." } },
+    { "@type": "Question", "name": "What types of QR codes can I create?", "acceptedAnswer": { "@type": "Answer", "text": "You can create QR codes for URL, plain text, Wi-Fi, email, phone, SMS, contact (vCard), location, and multiple barcode types (EAN, UPC, CODE_39, CODE_93, CODE_128, ITF, PDF_417, CODABAR, DATA_MATRIX, AZTEC)." } },
     { "@type": "Question", "name": "Can I customize the QR code color?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. You can choose custom foreground and background colors, sizes, error correction levels, and safe module styles." } },
     { "@type": "Question", "name": "Can I download my QR code?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. You can download your customized QR code as PNG, JPG, or SVG, and also copy it to your clipboard." } },
     { "@type": "Question", "name": "Does the QR Code Generator work on mobile?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. The website is fully responsive and works on Android phones, iPhones, tablets, and desktop computers." } }
@@ -455,6 +455,65 @@ a:hover { text-decoration: underline; }
 [data-theme="dark"] .btn-ghost:hover { background: rgba(56,189,248,.12); color: var(--brand); }
 .btn-ghost svg { width: 17px; height: 17px; flex-shrink: 0; }
 
+/* Add Another button (multi-input) */
+.btn-add {
+  display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+  padding: 10px 16px; margin-top: 4px;
+  font-size: .85rem; font-weight: 600; color: var(--brand-dark);
+  background: var(--brand-soft); border: 1.5px dashed var(--brand);
+  border-radius: var(--radius-sm); cursor: pointer;
+  transition: all var(--t); width: 100%;
+}
+.btn-add:hover { background: var(--brand); color: #fff; border-style: solid; }
+[data-theme="dark"] .btn-add { background: rgba(56,189,248,.12); color: var(--brand); border-color: var(--brand); }
+[data-theme="dark"] .btn-add:hover { background: var(--brand); color: #fff; }
+.btn-add svg { width: 16px; height: 16px; flex-shrink: 0; }
+
+.multi-field { display: flex; align-items: flex-start; gap: 8px; }
+.multi-field input { flex: 1; }
+.btn-remove {
+  width: 40px; height: 40px; margin-top: 1px;
+  display: inline-flex; align-items: center; justify-content: center;
+  border-radius: var(--radius-sm); color: var(--danger);
+  background: rgba(239,68,68,.08); border: 1.5px solid rgba(239,68,68,.25);
+  transition: all var(--t); flex-shrink: 0; cursor: pointer;
+}
+.btn-remove:hover { background: var(--danger); color: #fff; }
+.btn-remove svg { width: 16px; height: 16px; }
+
+/* Others Type sub-grid */
+.others-wrap {
+  display: none;
+  margin-top: 4px; margin-bottom: 8px;
+  padding: 14px; background: var(--surface-2);
+  border: 1.5px solid var(--border); border-radius: var(--radius);
+}
+.others-wrap.show { display: block; animation: slideIn .25s ease; }
+.others-title {
+  font-size: .82rem; font-weight: 700; color: var(--text);
+  text-transform: uppercase; letter-spacing: .05em; margin-bottom: 10px;
+}
+.others-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
+  gap: 8px;
+}
+.other-btn {
+  padding: 10px 8px; font-size: .78rem; font-weight: 600;
+  color: var(--text-muted); background: var(--surface);
+  border: 1.5px solid var(--border); border-radius: var(--radius-sm);
+  transition: all var(--t); text-align: center;
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  letter-spacing: .01em; cursor: pointer;
+}
+.other-btn:hover { border-color: var(--brand); color: var(--brand-dark); transform: translateY(-1px); }
+.other-btn.active {
+  background: linear-gradient(135deg, var(--brand) 0%, var(--accent) 100%);
+  color: #fff; border-color: transparent;
+  box-shadow: 0 4px 10px -3px rgba(14,165,233,.5);
+}
+[data-theme="dark"] .other-btn:hover { color: var(--brand); }
+
 @media (max-width: 520px) {
   #createBtn { flex: 1 1 100%; min-height: 56px; font-size: 1.02rem; }
   .btn-ghost { flex: 1 1 100%; }
@@ -705,6 +764,28 @@ a:hover { text-decoration: underline; }
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
           Location
         </button>
+        <button type="button" class="type-btn" data-type="others" role="tab" aria-selected="false">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="4"/><rect x="3" y="10" width="18" height="4"/><rect x="3" y="16" width="18" height="4"/></svg>
+          Others Type
+        </button>
+      </div>
+
+      <div class="others-wrap" id="othersWrap">
+        <div class="others-title">Select a barcode / 2D code type</div>
+        <div class="others-grid" id="othersGrid">
+          <button type="button" class="other-btn" data-other="EAN_8">EAN_8</button>
+          <button type="button" class="other-btn" data-other="EAN_13">EAN_13</button>
+          <button type="button" class="other-btn" data-other="UPC_E">UPC_E</button>
+          <button type="button" class="other-btn" data-other="UPC_A">UPC_A</button>
+          <button type="button" class="other-btn" data-other="CODE_39">CODE_39</button>
+          <button type="button" class="other-btn" data-other="CODE_93">CODE_93</button>
+          <button type="button" class="other-btn" data-other="CODE_128">CODE_128</button>
+          <button type="button" class="other-btn" data-other="ITF">ITF</button>
+          <button type="button" class="other-btn" data-other="PDF_417">PDF_417</button>
+          <button type="button" class="other-btn" data-other="CODABAR">CODABAR</button>
+          <button type="button" class="other-btn" data-other="DATA_MATRIX">DATA_MATRIX</button>
+          <button type="button" class="other-btn" data-other="AZTEC">AZTEC</button>
+        </div>
       </div>
 
       <h2>2. Enter Your Details</h2>
@@ -877,7 +958,7 @@ a:hover { text-decoration: underline; }
 <section class="section container" id="learn">
   <div class="section-head">
     <h2>Free Custom QR Code Generator</h2>
-    <p>Learn how to create a free QR code online and use this QR Code Maker for websites, text, Wi-Fi, email, phone, SMS, contacts, and locations.</p>
+    <p>Learn how to create a free QR code online and use this QR Code Maker for websites, text, Wi-Fi, email, phone, SMS, contacts, locations, and popular barcode formats.</p>
   </div>
   <div class="prose">
     <p>This free online QR Code Generator is a simple QR Code Maker and QR Code Creator for creating scannable custom QR codes. Generate codes for websites, text, Wi-Fi networks, email addresses, phone numbers, SMS messages, contact cards, and map locations. No account, email, or phone number is required.</p>
@@ -885,7 +966,7 @@ a:hover { text-decoration: underline; }
     <p>A QR (Quick Response) code is a two-dimensional barcode that stores information such as a URL, plain text, Wi-Fi credentials, or a contact card. Modern smartphone cameras can scan a QR code and act on its contents instantly.</p>
     <h3>How to Create a Custom QR Code</h3>
     <ol>
-      <li>Choose the QR code type — URL, Text, Wi-Fi, Email, Phone, SMS, Contact, or Location.</li>
+      <li>Choose the QR code type — URL, Text, Wi-Fi, Email, Phone, SMS, Contact, Location, or Others Type.</li>
       <li>Fill in the required fields.</li>
       <li>Open the Customize QR Code section to pick your colors, size, error correction level, style, and quiet zone.</li>
       <li>Click <strong>Create QR Code</strong> to generate it instantly.</li>
@@ -893,14 +974,15 @@ a:hover { text-decoration: underline; }
     </ol>
     <h3>QR Code Types You Can Create</h3>
     <ul>
-      <li><strong>URL / Website</strong> — open any web page.</li>
+      <li><strong>URL / Website</strong> — open any web page. Multiple URLs supported (one per line).</li>
       <li><strong>Text</strong> — store a plain text message.</li>
       <li><strong>Wi-Fi</strong> — connect to a network without typing the password.</li>
       <li><strong>Email</strong> — pre-fill the recipient, subject, and message.</li>
-      <li><strong>Phone</strong> — dial a number with a single tap.</li>
+      <li><strong>Phone</strong> — dial a number with a single tap. Multiple numbers supported.</li>
       <li><strong>SMS</strong> — pre-fill a text message.</li>
       <li><strong>Contact / vCard</strong> — save name, phone, email, and address.</li>
       <li><strong>Location</strong> — open a map at specific coordinates.</li>
+      <li><strong>Others Type</strong> — EAN_8, EAN_13, UPC_E, UPC_A, CODE_39, CODE_93, CODE_128, ITF, PDF_417, CODABAR, DATA_MATRIX, AZTEC.</li>
     </ul>
     <p>Whether you need a QR code generator online for a website link, a Wi-Fi QR code for guests, a contact QR code for a business card, or a quick text QR code, this tool creates it directly in your browser without an account.</p>
     <h3>Why Use Our QR Code Generator?</h3>
@@ -933,7 +1015,8 @@ a:hover { text-decoration: underline; }
     <details class="faq-item"><summary>What is a QR Code?</summary><div class="faq-answer">A QR (Quick Response) code is a square 2D barcode that stores information like a website URL, plain text, Wi-Fi credentials, or contact details. Smartphones can scan it instantly using the camera.</div></details>
     <details class="faq-item"><summary>Is this QR Code Generator free?</summary><div class="faq-answer">Yes. The QR Code Generator is completely free. There is no cost, no signup, and no watermark on the generated QR codes.</div></details>
     <details class="faq-item"><summary>Do I need an account?</summary><div class="faq-answer">No. You can create QR codes instantly without registration, login, email, or phone number.</div></details>
-    <details class="faq-item"><summary>What types of QR codes can I create?</summary><div class="faq-answer">You can create QR codes for URL, plain text, Wi-Fi, email, phone, SMS, contact (vCard), and location.</div></details>
+    <details class="faq-item"><summary>What types of QR codes can I create?</summary><div class="faq-answer">You can create QR codes for URL, plain text, Wi-Fi, email, phone, SMS, contact (vCard), location, and additional barcode types through Others Type (EAN, UPC, CODE_39, CODE_93, CODE_128, ITF, PDF_417, CODABAR, DATA_MATRIX, AZTEC).</div></details>
+    <details class="faq-item"><summary>Can I add multiple URLs or phone numbers?</summary><div class="faq-answer">Yes. The URL and Phone types support adding multiple entries using the "Add Another URL" and "Add Another Phone" buttons. All entries are combined into a single scannable QR code.</div></details>
     <details class="faq-item"><summary>Can I customize the QR code color?</summary><div class="faq-answer">Yes. You can customize the QR color, background color, size, error correction level, module style, and quiet zone. The downloaded QR code will keep your customization.</div></details>
     <details class="faq-item"><summary>Can I download my QR code?</summary><div class="faq-answer">Yes. You can download the customized QR code as PNG, JPG, or SVG, and you can also copy it to your clipboard.</div></details>
     <details class="faq-item"><summary>Does the QR Code Generator work on mobile?</summary><div class="faq-answer">Yes. The website is fully responsive and works on Android phones, iPhones, tablets, laptops, and desktop computers.</div></details>
@@ -952,7 +1035,7 @@ a:hover { text-decoration: underline; }
           <img src="https://pxdrop.online/raw/daifgq6hv1ts73cu89h0" alt="QR Code Generator Logo" width="42" height="42" loading="lazy" />
           <div><strong>QR Code Generator</strong><span>by MRS Engineers BD</span></div>
         </div>
-        <p class="footer-desc">Create free custom QR codes for websites, text, Wi-Fi, email, phone, SMS, contacts, and locations. No signup required.</p>
+        <p class="footer-desc">Create free custom QR codes for websites, text, Wi-Fi, email, phone, SMS, contacts, locations, and popular barcode formats. No signup required.</p>
       </div>
       <div class="footer-col">
         <h4>Navigate</h4>
@@ -987,13 +1070,14 @@ a:hover { text-decoration: underline; }
       </button>
     </div>
     <div class="modal-body">
-      <p><strong>QR Code Generator</strong> is a free online tool that makes it easy to create QR codes for websites, text, Wi-Fi, email, phone numbers, SMS, contacts, and locations without registration.</p>
+      <p><strong>QR Code Generator</strong> is a free online tool that makes it easy to create QR codes for websites, text, Wi-Fi, email, phone numbers, SMS, contacts, locations, and popular barcode formats without registration.</p>
       <p>QR codes are generated in your browser, so you do not need to create an account or share personal information. Use the customization panel to change QR color, background color, size, error correction level, module style, and quiet zone.</p>
       <p>Developed by <strong>MRS Engineers BD</strong>.</p>
       <h3>Supported Types</h3>
       <ul>
-        <li>URL / Website</li><li>Plain Text</li><li>Wi-Fi Network</li><li>Email</li>
-        <li>Phone Number</li><li>SMS Message</li><li>Contact / vCard</li><li>Location Coordinates</li>
+        <li>URL / Website (multiple)</li><li>Plain Text</li><li>Wi-Fi Network</li><li>Email</li>
+        <li>Phone Number (multiple)</li><li>SMS Message</li><li>Contact / vCard</li><li>Location Coordinates</li>
+        <li>Others Type: EAN_8, EAN_13, UPC_E, UPC_A, CODE_39, CODE_93, CODE_128, ITF, PDF_417, CODABAR, DATA_MATRIX, AZTEC</li>
       </ul>
     </div>
   </div>
@@ -1024,6 +1108,16 @@ a:hover { text-decoration: underline; }
 </div>
 
 <div class="toasts" id="toasts" aria-live="polite" aria-atomic="true"></div>
+
+<!-- =========================================================
+     BWIP-JS (Barcode Writer in Pure JavaScript) — CDN load.
+     Provides genuine standards-compliant generation for
+     EAN_8, EAN_13, UPC_E, UPC_A, CODE_39, CODE_93, CODE_128,
+     ITF, PDF_417, CODABAR, DATA_MATRIX, AZTEC.
+     The existing self-contained QR engine below remains the
+     primary QR generator and works fully offline.
+     ========================================================= -->
+<script src="https://cdn.jsdelivr.net/npm/bwip-js@4.3.1/dist/bwip-js-min.js" defer></script>
 
 <!-- =========================================================
      QR ENGINE (SELF-CONTAINED — NO CDN DEPENDENCY)
@@ -1401,16 +1495,16 @@ a:hover { text-decoration: underline; }
     var fmt = ((data << 10) | rem) ^ 0x5412;
     var size = m.length;
 
-    // First copy (top-left): follows the QR standard's x/y coordinate layout.
+    // First copy (top-left)
     for (var i2 = 0; i2 < 6; i2++) m[i2][8] = ((fmt >> i2) & 1) === 1;
     m[7][8] = ((fmt >> 6) & 1) === 1;
     m[8][8] = ((fmt >> 7) & 1) === 1;
     m[8][7] = ((fmt >> 8) & 1) === 1;
     for (var j = 9; j < 15; j++) m[8][14 - j] = ((fmt >> j) & 1) === 1;
 
-    // Horizontal strip (top-right) — bits 0..7 to (8, size-1..size-8)
+    // Horizontal strip (top-right) — bits 0..7
     for (var k = 0; k < 8; k++) m[8][size - 1 - k] = ((fmt >> k) & 1) === 1;
-    // Bottom-left column — bits 8..14 to (size-7..size-1, 8)
+    // Bottom-left column — bits 8..14
     for (var l = 8; l < 15; l++) m[size - 15 + l][8] = ((fmt >> l) & 1) === 1;
 
     m[size - 8][8] = true; // dark module
@@ -1507,13 +1601,7 @@ a:hover { text-decoration: underline; }
     };
   }
 
-  /* ---------- Safe renderers ----------
-     Default style = 'square' → classic, maximum scannability.
-     'rounded' rounds interior modules with a small radius.
-     'dots'    draws interior modules as circles.
-     In all styles, finder + alignment patterns stay as crisp square
-     blocks so scanners can lock onto the QR.
-     The quiet zone is preserved. */
+  /* ---------- Safe renderers ---------- */
 
   function renderToCanvas(qr, opts) {
     opts = opts || {};
@@ -1525,7 +1613,6 @@ a:hover { text-decoration: underline; }
 
     var n = qr.size;
     var total = n + margin * 2;
-    // Choose integer module size for crisp squares.
     var mod = Math.max(1, Math.floor(size / total));
     var px = total * mod;
 
@@ -1535,7 +1622,6 @@ a:hover { text-decoration: underline; }
     var ctx = canvas.getContext('2d');
     ctx.imageSmoothingEnabled = false;
 
-    // Background (quiet zone included)
     ctx.fillStyle = light;
     ctx.fillRect(0, 0, px, px);
 
@@ -1621,7 +1707,6 @@ a:hover { text-decoration: underline; }
                   'a' + rr.toFixed(3) + ' ' + rr.toFixed(3) + ' 0 1 0 ' + (rr * 2).toFixed(3) + ' 0' +
                   'a' + rr.toFixed(3) + ' ' + rr.toFixed(3) + ' 0 1 0 -' + (rr * 2).toFixed(3) + ' 0z';
         } else {
-          // rounded
           var x0 = x + 0.5, y0 = y + 0.5, w = mod - 1, h = mod - 1;
           var rad = Math.min(w, h) * 0.28;
           path += 'M' + (x0 + rad).toFixed(3) + ' ' + y0.toFixed(3) +
@@ -1685,14 +1770,40 @@ a:hover { text-decoration: underline; }
   });
 
   /* ---------- TYPES ---------- */
+  /* Multi-input info:
+     - url   : supports multiple inputs (multiKey: 'urls')
+     - phone : supports multiple inputs (multiKey: 'phones')
+     All others: single-value, existing behavior preserved.
+  */
+
+  function makeMultiField(name, label, type, placeholder, hint) {
+    return {
+      name: name,
+      label: label,
+      type: type,
+      placeholder: placeholder,
+      hint: hint,
+      multi: true
+    };
+  }
+
   var types = {
     url: {
-      subtitle: 'Enter the website URL you want to link to.',
-      fields: [{ name: 'url', label: 'Website URL', type: 'url', placeholder: 'https://example.com', required: true, hint: 'Must start with http:// or https://' }],
-      build: function (v) { return v.url.trim(); },
+      subtitle: 'Enter the website URL(s) you want to link to. Multiple URLs supported — one per line.',
+      fields: [ makeMultiField('urls', 'Website URL', 'url', 'https://example.com', 'Must start with http:// or https://') ],
+      build: function (v) {
+        var list = (v.urls || []).map(function (s) { return (s || '').trim(); }).filter(Boolean);
+        if (list.length <= 1) return list[0] || '';
+        return list.join('\n');
+      },
       validate: function (v) {
-        if (!v.url || !v.url.trim()) return 'Please enter a website URL.';
-        if (!/^https?:\/\/.+/i.test(v.url.trim())) return 'Please enter a valid URL starting with http:// or https://';
+        var list = (v.urls || []).map(function (s) { return (s || '').trim(); }).filter(Boolean);
+        if (!list.length) return 'Please enter at least one website URL.';
+        for (var i = 0; i < list.length; i++) {
+          if (!/^https?:\/\/.+/i.test(list[i])) {
+            return 'URL ' + (i + 1) + ' is invalid. It must start with http:// or https://';
+          }
+        }
         return null;
       }
     },
@@ -1744,10 +1855,21 @@ a:hover { text-decoration: underline; }
       }
     },
     phone: {
-      subtitle: 'Enter the phone number the QR code should dial.',
-      fields: [{ name: 'phone', label: 'Phone Number', type: 'tel', placeholder: '+8801712345678', required: true }],
-      build: function (v) { return 'tel:' + v.phone.replace(/\s+/g, ''); },
-      validate: function (v) { return v.phone && v.phone.trim() ? null : 'Please enter a phone number.'; }
+      subtitle: 'Enter the phone number(s) the QR code should dial. Multiple numbers supported — one per line.',
+      fields: [ makeMultiField('phones', 'Phone Number', 'tel', '+8801712345678', 'Include country code where possible') ],
+      build: function (v) {
+        var list = (v.phones || []).map(function (s) { return (s || '').replace(/\s+/g, ''); }).filter(Boolean);
+        if (list.length <= 1) return 'tel:' + (list[0] || '');
+        return list.join('\n');
+      },
+      validate: function (v) {
+        var list = (v.phones || []).map(function (s) { return (s || '').replace(/\s+/g, ''); }).filter(Boolean);
+        if (!list.length) return 'Please enter at least one phone number.';
+        for (var i = 0; i < list.length; i++) {
+          if (!/^[+0-9()\-]+$/.test(list[i])) return 'Phone ' + (i + 1) + ' contains invalid characters.';
+        }
+        return null;
+      }
     },
     sms: {
       subtitle: 'Enter the phone number and an optional message for SMS.',
@@ -1804,11 +1926,146 @@ a:hover { text-decoration: underline; }
     }
   };
 
+  /* ---------- OTHERS TYPE (barcode / 2D) definitions ---------- */
+  var othersTypes = {
+    EAN_8: {
+      subtitle: 'Enter an 8-digit EAN-8 number (7 digits + check digit, or 7 digits for auto-checksum).',
+      fields: [{ name: 'value', label: 'EAN-8 Number', type: 'text', placeholder: '96385074', required: true, hint: 'Exactly 8 digits (or 7 digits to auto-compute the checksum).' }],
+      validate: function (v) {
+        var s = (v.value || '').trim();
+        if (!/^\d{7,8}$/.test(s)) return 'EAN-8 must be exactly 7 or 8 digits.';
+        return null;
+      }
+    },
+    EAN_13: {
+      subtitle: 'Enter a 13-digit EAN-13 number (12 digits + check digit, or 12 digits for auto-checksum).',
+      fields: [{ name: 'value', label: 'EAN-13 Number', type: 'text', placeholder: '5901234123457', required: true, hint: 'Exactly 13 digits (or 12 digits to auto-compute the checksum).' }],
+      validate: function (v) {
+        var s = (v.value || '').trim();
+        if (!/^\d{12,13}$/.test(s)) return 'EAN-13 must be exactly 12 or 13 digits.';
+        return null;
+      }
+    },
+    UPC_E: {
+      subtitle: 'Enter a UPC-E number (6 digits, or 6 digits + check digit).',
+      fields: [{ name: 'value', label: 'UPC-E Number', type: 'text', placeholder: '01234565', required: true, hint: '6 or 7 or 8 digits.' }],
+      validate: function (v) {
+        var s = (v.value || '').trim();
+        if (!/^\d{6,8}$/.test(s)) return 'UPC-E must be 6, 7, or 8 digits.';
+        return null;
+      }
+    },
+    UPC_A: {
+      subtitle: 'Enter a UPC-A number (11 digits + check digit, or 11 digits for auto-checksum).',
+      fields: [{ name: 'value', label: 'UPC-A Number', type: 'text', placeholder: '012345678905', required: true, hint: '11 or 12 digits.' }],
+      validate: function (v) {
+        var s = (v.value || '').trim();
+        if (!/^\d{11,12}$/.test(s)) return 'UPC-A must be 11 or 12 digits.';
+        return null;
+      }
+    },
+    CODE_39: {
+      subtitle: 'Enter text for CODE_39 (uppercase letters, digits, and - . $ / + % space).',
+      fields: [{ name: 'value', label: 'CODE_39 Data', type: 'text', placeholder: 'CODE39TEST', required: true, hint: 'Allowed: A–Z, 0–9, and - . $ / + % space.' }],
+      validate: function (v) {
+        var s = (v.value || '');
+        if (!s.trim()) return 'Please enter CODE_39 data.';
+        if (!/^[A-Z0-9\-\.\ \$\/\+\%]+$/.test(s)) return 'CODE_39 supports uppercase A–Z, digits 0–9, and - . $ / + % space.';
+        return null;
+      }
+    },
+    CODE_93: {
+      subtitle: 'Enter text for CODE_93 (uppercase letters, digits, and - . $ / + % space).',
+      fields: [{ name: 'value', label: 'CODE_93 Data', type: 'text', placeholder: 'CODE93TEST', required: true, hint: 'Allowed: A–Z, 0–9, and - . $ / + % space.' }],
+      validate: function (v) {
+        var s = (v.value || '');
+        if (!s.trim()) return 'Please enter CODE_93 data.';
+        if (!/^[A-Z0-9\-\.\ \$\/\+\%]+$/.test(s)) return 'CODE_93 supports uppercase A–Z, digits 0–9, and - . $ / + % space.';
+        return null;
+      }
+    },
+    CODE_128: {
+      subtitle: 'Enter text for CODE_128 (full ASCII supported).',
+      fields: [{ name: 'value', label: 'CODE_128 Data', type: 'text', placeholder: 'Code128 Test 123', required: true, hint: 'Full ASCII supported.' }],
+      validate: function (v) {
+        var s = (v.value || '');
+        if (!s) return 'Please enter CODE_128 data.';
+        return null;
+      }
+    },
+    ITF: {
+      subtitle: 'Enter an even number of digits for ITF (Interleaved 2 of 5).',
+      fields: [{ name: 'value', label: 'ITF Digits', type: 'text', placeholder: '1234567890', required: true, hint: 'Even number of digits (e.g. 10, 12, 14).' }],
+      validate: function (v) {
+        var s = (v.value || '').trim();
+        if (!/^\d+$/.test(s)) return 'ITF must contain digits only.';
+        if (s.length % 2 !== 0) return 'ITF requires an even number of digits.';
+        if (s.length < 4) return 'ITF requires at least 4 digits.';
+        return null;
+      }
+    },
+    PDF_417: {
+      subtitle: 'Enter text or data for PDF417 (2D barcode).',
+      fields: [{ name: 'value', label: 'PDF417 Data', type: 'textarea', placeholder: 'Enter PDF417 data...', required: true }],
+      validate: function (v) {
+        var s = (v.value || '');
+        if (!s.trim()) return 'Please enter PDF417 data.';
+        return null;
+      }
+    },
+    CODABAR: {
+      subtitle: 'Enter a Codabar value. Start/stop must be A, B, C, or D (e.g. A1234B).',
+      fields: [{ name: 'value', label: 'Codabar Data', type: 'text', placeholder: 'A123456B', required: true, hint: 'Allowed: 0–9, - $ : / . + and start/stop A B C D.' }],
+      validate: function (v) {
+        var s = (v.value || '').trim();
+        if (!s) return 'Please enter Codabar data.';
+        if (!/^[A-D][0-9\-\$\:\/\.\+]+[A-D]$/i.test(s)) return 'Codabar must start and end with A, B, C, or D (e.g. A123456B).';
+        return null;
+      }
+    },
+    DATA_MATRIX: {
+      subtitle: 'Enter text or data for Data Matrix (2D barcode).',
+      fields: [{ name: 'value', label: 'Data Matrix Data', type: 'textarea', placeholder: 'Enter Data Matrix data...', required: true }],
+      validate: function (v) {
+        var s = (v.value || '');
+        if (!s.trim()) return 'Please enter Data Matrix data.';
+        return null;
+      }
+    },
+    AZTEC: {
+      subtitle: 'Enter text or data for Aztec Code (2D barcode).',
+      fields: [{ name: 'value', label: 'Aztec Data', type: 'textarea', placeholder: 'Enter Aztec data...', required: true }],
+      validate: function (v) {
+        var s = (v.value || '');
+        if (!s.trim()) return 'Please enter Aztec data.';
+        return null;
+      }
+    }
+  };
+
+  /* Map internal "other" key to bwip-js bcid */
+  var OTHER_TO_BCID = {
+    EAN_8: 'ean8',
+    EAN_13: 'ean13',
+    UPC_E: 'upce',
+    UPC_A: 'upca',
+    CODE_39: 'code39',
+    CODE_93: 'code93',
+    CODE_128: 'code128',
+    ITF: 'interleaved2of5',
+    PDF_417: 'pdf417',
+    CODABAR: 'rationalizedCodabar',
+    DATA_MATRIX: 'datamatrix',
+    AZTEC: 'azteccode'
+  };
+
   /* ---------- STATE ---------- */
   var currentType = 'url';
+  var currentOther = null;   // when currentType === 'others'
   var currentData = null;
   var currentQr = null;
   var currentPng = null;
+  var currentIsBarcode = false;   // true if current result came from bwip-js
 
   var opts = {
     size: 320,
@@ -1824,6 +2081,8 @@ a:hover { text-decoration: underline; }
   var errorBox = document.getElementById('errorBox');
   var errorText = document.getElementById('errorText');
   var typeBtns = document.querySelectorAll('.type-btn');
+  var othersWrap = document.getElementById('othersWrap');
+  var othersGrid = document.getElementById('othersGrid');
   var customHead = document.getElementById('customizeHead');
   var customBody = document.getElementById('customizeBody');
   var fgColor = document.getElementById('fgColor');
@@ -1895,33 +2154,131 @@ a:hover { text-decoration: underline; }
   function contrastIsSafe() { return contrastScore() >= 200; }
 
   /* ---------- RENDER FIELDS ---------- */
+  function renderMultiField(f, idx) {
+    // For url/phone fields, name is 'urls' or 'phones'. Each input gets an index suffix.
+    var inputId = 'f-' + f.name + '-' + idx;
+    var html = '<div class="field">';
+    html += '<label for="' + inputId + '">' + f.label + ' ' + (idx + 1) + '<span class="req">*</span></label>';
+    html += '<div class="multi-field">';
+    html += '<input type="' + f.type + '" id="' + inputId + '" data-multi="' + f.name + '" placeholder="' + (f.placeholder || '') + '" />';
+    if (idx > 0) {
+      html += '<button type="button" class="btn-remove" data-remove="' + idx + '" aria-label="Remove this ' + f.label + '">' +
+        '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>' +
+        '</button>';
+    }
+    html += '</div>';
+    if (idx === 0 && f.hint) html += '<span class="hint">' + f.hint + '</span>';
+    html += '</div>';
+    return html;
+  }
+
+  function renderSingleField(f) {
+    var html = '';
+    if (f.type === 'checkbox') {
+      html += '<div class="field"><label class="field-check"><input type="checkbox" name="' + f.name + '" id="f-' + f.name + '"> ' + f.label + '</label></div>';
+    } else if (f.type === 'select') {
+      html += '<div class="field"><label for="f-' + f.name + '">' + f.label + (f.required ? '<span class="req">*</span>' : '') + '</label>';
+      html += '<select name="' + f.name + '" id="f-' + f.name + '">';
+      f.options.forEach(function (o) { html += '<option value="' + o.value + '">' + o.label + '</option>'; });
+      html += '</select></div>';
+    } else if (f.type === 'textarea') {
+      html += '<div class="field"><label for="f-' + f.name + '">' + f.label + (f.required ? '<span class="req">*</span>' : '') + '</label>';
+      html += '<textarea name="' + f.name + '" id="f-' + f.name + '" placeholder="' + (f.placeholder || '') + '"></textarea>';
+      if (f.hint) html += '<span class="hint">' + f.hint + '</span>';
+      html += '</div>';
+    } else {
+      html += '<div class="field"><label for="f-' + f.name + '">' + f.label + (f.required ? '<span class="req">*</span>' : '') + '</label>';
+      html += '<input type="' + f.type + '" name="' + f.name + '" id="f-' + f.name + '" placeholder="' + (f.placeholder || '') + '">';
+      if (f.hint) html += '<span class="hint">' + f.hint + '</span>';
+      html += '</div>';
+    }
+    return html;
+  }
+
   function renderFields(type) {
+    // Others Type
+    if (type === 'others') {
+      formSubtitle.textContent = currentOther
+        ? (othersTypes[currentOther] ? othersTypes[currentOther].subtitle : 'Select a barcode type below.')
+        : 'Choose a barcode / 2D code type from the list above.';
+      if (!currentOther) {
+        dynamicFields.innerHTML = '<p class="hint" style="font-size:.85rem;color:var(--text-muted);">Pick a code type above (EAN_8, EAN_13, UPC_E, UPC_A, CODE_39, CODE_93, CODE_128, ITF, PDF_417, CODABAR, DATA_MATRIX, AZTEC) to enter the data.</p>';
+        return;
+      }
+      var odef = othersTypes[currentOther];
+      var html2 = '';
+      odef.fields.forEach(function (f) { html2 += renderSingleField(f); });
+      dynamicFields.innerHTML = html2;
+      return;
+    }
+
     var def = types[type];
     if (!def) return;
     formSubtitle.textContent = def.subtitle;
     var html = '';
     def.fields.forEach(function (f) {
-      if (f.type === 'checkbox') {
-        html += '<div class="field"><label class="field-check"><input type="checkbox" name="' + f.name + '" id="f-' + f.name + '"> ' + f.label + '</label></div>';
-      } else if (f.type === 'select') {
-        html += '<div class="field"><label for="f-' + f.name + '">' + f.label + (f.required ? '<span class="req">*</span>' : '') + '</label>';
-        html += '<select name="' + f.name + '" id="f-' + f.name + '">';
-        f.options.forEach(function (o) { html += '<option value="' + o.value + '">' + o.label + '</option>'; });
-        html += '</select></div>';
-      } else if (f.type === 'textarea') {
-        html += '<div class="field"><label for="f-' + f.name + '">' + f.label + (f.required ? '<span class="req">*</span>' : '') + '</label>';
-        html += '<textarea name="' + f.name + '" id="f-' + f.name + '" placeholder="' + (f.placeholder || '') + '"></textarea>';
-        if (f.hint) html += '<span class="hint">' + f.hint + '</span>';
-        html += '</div>';
+      if (f.multi) {
+        html += renderMultiField(f, 0);
+        html += '<button type="button" class="btn-add" data-add="' + f.name + '">' +
+          '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>' +
+          (f.name === 'urls' ? 'Add Another URL' : f.name === 'phones' ? 'Add Another Phone' : 'Add Another') +
+          '</button>';
       } else {
-        html += '<div class="field"><label for="f-' + f.name + '">' + f.label + (f.required ? '<span class="req">*</span>' : '') + '</label>';
-        html += '<input type="' + f.type + '" name="' + f.name + '" id="f-' + f.name + '" placeholder="' + (f.placeholder || '') + '">';
-        if (f.hint) html += '<span class="hint">' + f.hint + '</span>';
-        html += '</div>';
+        html += renderSingleField(f);
       }
     });
     dynamicFields.innerHTML = html;
   }
+
+  /* ---------- MULTI-INPUT HANDLERS ---------- */
+  dynamicFields.addEventListener('click', function (e) {
+    var addBtn = e.target.closest('[data-add]');
+    if (addBtn) {
+      e.preventDefault();
+      var multiName = addBtn.getAttribute('data-add');
+      var def = types[currentType];
+      if (!def) return;
+      var fdef = null;
+      for (var i = 0; i < def.fields.length; i++) {
+        if (def.fields[i].name === multiName) { fdef = def.fields[i]; break; }
+      }
+      if (!fdef) return;
+      // Count existing inputs
+      var inputs = dynamicFields.querySelectorAll('[data-multi="' + multiName + '"]');
+      var idx = inputs.length;
+      // Insert new field before the Add button
+      var wrapper = document.createElement('div');
+      wrapper.innerHTML = renderMultiField(fdef, idx);
+      var newField = wrapper.firstElementChild;
+      addBtn.parentNode.insertBefore(newField, addBtn);
+      var newInput = newField.querySelector('input');
+      if (newInput) newInput.focus();
+      return;
+    }
+    var remBtn = e.target.closest('[data-remove]');
+    if (remBtn) {
+      e.preventDefault();
+      var field = remBtn.closest('.field');
+      if (field) field.remove();
+      // Re-number remaining multi inputs
+      var multiName2 = null;
+      var remaining = dynamicFields.querySelectorAll('[data-multi]');
+      if (remaining.length) multiName2 = remaining[0].getAttribute('data-multi');
+      if (multiName2) {
+        var all = dynamicFields.querySelectorAll('[data-multi="' + multiName2 + '"]');
+        all.forEach(function (inp, i) {
+          var lbl = inp.closest('.field').querySelector('label');
+          if (lbl) {
+            var txt = lbl.textContent.replace(/\s*\d+\s*\*?\s*$/, '').replace(/\*$/, '');
+            lbl.innerHTML = txt.trim() + ' ' + (i + 1) + '<span class="req">*</span>';
+          }
+          // remove the remove-button on first item
+          var rbtn = inp.closest('.multi-field').querySelector('.btn-remove');
+          if (i === 0 && rbtn) rbtn.remove();
+        });
+      }
+    }
+  });
 
   /* ---------- TYPE BUTTONS ---------- */
   typeBtns.forEach(function (b) {
@@ -1934,10 +2291,32 @@ a:hover { text-decoration: underline; }
       b.classList.add('active');
       b.setAttribute('aria-selected', 'true');
       currentType = b.getAttribute('data-type');
+
+      if (currentType === 'others') {
+        othersWrap.classList.add('show');
+        currentOther = null;
+        // clear active other buttons
+        othersGrid.querySelectorAll('.other-btn').forEach(function (x) { x.classList.remove('active'); });
+      } else {
+        othersWrap.classList.remove('show');
+      }
+
       renderFields(currentType);
       hideError();
       resetResult();
     });
+  });
+
+  /* ---------- OTHERS TYPE BUTTONS ---------- */
+  othersGrid.addEventListener('click', function (e) {
+    var btn = e.target.closest('.other-btn');
+    if (!btn) return;
+    othersGrid.querySelectorAll('.other-btn').forEach(function (x) { x.classList.remove('active'); });
+    btn.classList.add('active');
+    currentOther = btn.getAttribute('data-other');
+    renderFields('others');
+    hideError();
+    resetResult();
   });
 
   /* ---------- CUSTOMIZE ---------- */
@@ -2030,12 +2409,31 @@ a:hover { text-decoration: underline; }
 
   /* ---------- COLLECT ---------- */
   function collect() {
+    if (currentType === 'others') {
+      if (!currentOther) return {};
+      var odef = othersTypes[currentOther];
+      var v0 = {};
+      odef.fields.forEach(function (f) {
+        var el = document.getElementById('f-' + f.name);
+        if (!el) return;
+        v0[f.name] = f.type === 'checkbox' ? el.checked : el.value;
+      });
+      return v0;
+    }
+
     var def = types[currentType];
     var v = {};
     def.fields.forEach(function (f) {
-      var el = document.getElementById('f-' + f.name);
-      if (!el) return;
-      v[f.name] = f.type === 'checkbox' ? el.checked : el.value;
+      if (f.multi) {
+        var inputs = dynamicFields.querySelectorAll('[data-multi="' + f.name + '"]');
+        var arr = [];
+        inputs.forEach(function (inp) { arr.push(inp.value); });
+        v[f.name] = arr;
+      } else {
+        var el = document.getElementById('f-' + f.name);
+        if (!el) return;
+        v[f.name] = f.type === 'checkbox' ? el.checked : el.value;
+      }
     });
     return v;
   }
@@ -2045,13 +2443,14 @@ a:hover { text-decoration: underline; }
     currentData = null;
     currentQr = null;
     currentPng = null;
+    currentIsBarcode = false;
     resultEmpty.style.display = 'flex';
     resultReady.classList.remove('show');
     qrBox.innerHTML = '';
   }
 
-  /* ---------- RENDER PREVIEW ---------- */
-  function renderPreview() {
+  /* ---------- RENDER PREVIEW (QR) ---------- */
+  function renderQrPreview() {
     if (!currentQr) return;
     try {
       var canvas = window.MiniQR.renderToCanvas(currentQr, {
@@ -2077,14 +2476,65 @@ a:hover { text-decoration: underline; }
     } catch (e) { /* keep prior preview */ }
   }
 
+  /* ---------- RENDER PREVIEW (BARCODE via bwip-js) ---------- */
+  function renderBarcodePreview() {
+    if (!currentData || !currentOther) return;
+    if (typeof window.bwipjs === 'undefined') {
+      // Library not loaded yet — will retry shortly
+      return false;
+    }
+    var bcid = OTHER_TO_BCID[currentOther];
+    if (!bcid) return false;
+
+    try {
+      // Render to a canvas at a reasonable width
+      var tmp = document.createElement('canvas');
+      var renderOpts = {
+        bcid: bcid,
+        text: currentData,
+        scale: Math.max(2, Math.round(opts.size / 200)),
+        height: currentOther === 'PDF_417' ? 20 : 0,
+        includetext: true,
+        textxalign: 'center',
+        backgroundcolor: bgColor.value.replace('#', ''),
+        barcolor: fgColor.value.replace('#', ''),
+        paddingwidth: opts.margin * 2,
+        paddingheight: opts.margin * 2
+      };
+      window.bwipjs.toCanvas(tmp, renderOpts);
+      currentPng = tmp.toDataURL('image/png');
+
+      qrBox.innerHTML = '';
+      var img = document.createElement('img');
+      img.src = currentPng;
+      img.alt = 'Generated Barcode';
+      img.style.width = '100%';
+      img.style.height = 'auto';
+      img.style.maxWidth = '100%';
+      img.style.objectFit = 'contain';
+      img.style.imageRendering = 'pixelated';
+      qrBox.appendChild(img);
+      currentIsBarcode = true;
+      return true;
+    } catch (err) {
+      showError('Could not generate this barcode with the given value. Please check the format.');
+      toast('Barcode generation failed: ' + (err && err.message ? err.message : 'invalid value'), 'error');
+      return false;
+    }
+  }
+
   /* ---------- REGENERATE ---------- */
   function regenerate() {
     if (!currentData) return;
+    if (currentIsBarcode || currentType === 'others') {
+      renderBarcodePreview();
+      return;
+    }
     try {
       var qr = window.MiniQR.generate(currentData, opts.ec);
       if (!qr) return;
       currentQr = qr;
-      renderPreview();
+      renderQrPreview();
     } catch (e) { /* keep prior */ }
   }
 
@@ -2092,6 +2542,44 @@ a:hover { text-decoration: underline; }
   function generate() {
     hideError();
 
+    /* Others Type */
+    if (currentType === 'others') {
+      if (!currentOther) {
+        showError('Please select a barcode / 2D code type above.');
+        toast('Please pick a code type first.', 'error');
+        return;
+      }
+      if (typeof window.bwipjs === 'undefined') {
+        showError('The barcode library is still loading. Please wait a moment and try again. Note: barcode types require an internet connection the first time.');
+        toast('Barcode library not loaded yet.', 'error');
+        return;
+      }
+      var odef = othersTypes[currentOther];
+      var ov = collect();
+      var oerr = odef.validate(ov);
+      if (oerr) {
+        showError(oerr);
+        toast(oerr, 'error');
+        return;
+      }
+      currentData = (ov.value || '').trim();
+      // Ensure contrast is safe for barcodes too
+      if (!contrastIsSafe()) {
+        showError('Low contrast between barcode color and background. Please choose higher-contrast colors.');
+        toast('Low contrast — increase contrast.', 'error');
+        customHead.click();
+        return;
+      }
+      currentIsBarcode = true;
+      var ok = renderBarcodePreview();
+      if (!ok) return;
+      resultEmpty.style.display = 'none';
+      resultReady.classList.add('show');
+      toast('Your barcode is ready!', 'success');
+      return;
+    }
+
+    /* Standard QR types (existing behavior preserved) */
     var def = types[currentType];
     var values = collect();
 
@@ -2105,7 +2593,6 @@ a:hover { text-decoration: underline; }
     if (!contrastIsSafe()) {
       showError('Low contrast between QR color and background. Please choose higher-contrast colors so the QR code can be scanned reliably.');
       toast('Low contrast — increase contrast to generate.', 'error');
-      // Scroll to colors
       customHead.click();
       return;
     }
@@ -2127,9 +2614,9 @@ a:hover { text-decoration: underline; }
 
     currentData = data;
     currentQr = qr;
-    renderPreview();
+    currentIsBarcode = false;
+    renderQrPreview();
 
-    // Verify a real image was produced
     if (!currentPng) {
       showError('QR generation failed to produce an image. Please try again.');
       toast('QR generation failed.', 'error');
@@ -2183,6 +2670,12 @@ a:hover { text-decoration: underline; }
   });
 
   document.getElementById('dlSvg').addEventListener('click', function () {
+    if (!currentPng) { toast('Generate a QR code first.', 'error'); return; }
+    // SVG output only for QR (self-contained engine); for barcodes fall back to PNG data URL
+    if (currentIsBarcode || currentType === 'others') {
+      toast('SVG export is not available for this barcode format. Please use PNG or JPG.', 'info');
+      return;
+    }
     if (!currentQr) { toast('Generate a QR code first.', 'error'); return; }
     try {
       var svg = window.MiniQR.renderToSvg(currentQr, {
@@ -2310,6 +2803,17 @@ a:hover { text-decoration: underline; }
       document.querySelectorAll('.modal.open').forEach(closeModal);
     }
   });
+
+  /* ---------- WAIT FOR BWIP-JS (deferred CDN script) ---------- */
+  (function waitForBwip() {
+    if (typeof window.bwipjs !== 'undefined') return;
+    var tries = 0;
+    var iv = setInterval(function () {
+      tries++;
+      if (typeof window.bwipjs !== 'undefined') { clearInterval(iv); return; }
+      if (tries > 60) clearInterval(iv);
+    }, 500);
+  })();
 
   /* ---------- INIT ---------- */
   document.getElementById('year').textContent = new Date().getFullYear();
